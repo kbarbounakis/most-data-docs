@@ -5,6 +5,10 @@ body {
 	font-family: Roboto, Arial;
 }
 
+.github-only {
+	display: none;
+}
+
 .class-description {
   font-size: 100%
 }
