@@ -48,7 +48,8 @@
 
 
     <section class="readme">
-        <article><h1>MOST Web Framework Data Module</h1><p>The most-data module is the main ORM module of <a href="https://github.com/kbarbounakis/most-web">MOST Web Framework</a> applications and enables developers
+        <article><h1>MOST Web Framework ORM Module</h1><p>Visit <a href="https://docs.themost.io/most-data/">Documentation Home</a></p>
+<p>The most-data module is the main ORM module of <a href="https://github.com/kbarbounakis/most-web">MOST Web Framework</a> applications and enables developers
 to write scalable data-driven applications and services.</p>
 <h2>Features</h2><h3>JSON schema based data modelling</h3><p>Each data model is represented by a JSON schema which contains the complete model definition including fields, constraints,
 triggers, associations, privileges, data views etc:</p>
@@ -156,13 +157,13 @@ triggers, associations, privileges, data views etc:</p>
         }
     ]
 }</code></pre><h2>Automatic data model migration</h2><p>Each data model will be automatically migrated after its first use.
-DataModel.version property enables data model versioning:</p>
+<a href="https://docs.themost.io/most-data/DataModel.html">DataModel</a>.version property enables data model versioning:</p>
 <pre class="prettyprint source"><code>{
     &quot;name&quot;: &quot;User&quot;, &quot;id&quot;: 90, &quot;title&quot;: &quot;Users&quot;, &quot;inherits&quot;: &quot;Account&quot;, &quot;hidden&quot;: false,
     &quot;sealed&quot;: false, &quot;abstract&quot;: false, &quot;version&quot;: &quot;1.4&quot;,
     &quot;fields&quot;: [ .. ]
     ...
-}</code></pre><h2>Data model inheritance</h2><p>MOST data models support model inheritance. DataModel.inherits property defines the inherited model of data model.</p>
+}</code></pre><h2>Data model inheritance</h2><p>MOST data models support model inheritance. <a href="https://docs.themost.io/most-data/DataModel.html">DataModel</a>.inherits property defines the inherited model of data model.</p>
 <pre class="prettyprint source"><code>//User model inherits Account model
 {
     &quot;name&quot;: &quot;User&quot;, &quot;id&quot;: 90, &quot;title&quot;: &quot;Users&quot;, &quot;inherits&quot;: &quot;Account&quot;, &quot;hidden&quot;: false,
@@ -311,7 +312,7 @@ User access rights will be validated during read, insert, update or delete data 
     { &quot;mask&quot;:15, &quot;type&quot;:&quot;global&quot;, &quot;account&quot;:&quot;*&quot; }
 ]
 ...</code></pre><h2>Data caching</h2><p>The most-data module allows developers to use data caching mechanisms while getting data.
-DataModel.caching property indicates whether data will be cached or not.</p>
+<a href="https://docs.themost.io/most-data/DataModel.html">DataModel</a>.caching property indicates whether data will be cached or not.</p>
 <pre class="prettyprint source"><code>{
     &quot;name&quot;: &quot;OrderStatus&quot;, &quot;id&quot;: 9507079, &quot;title&quot;: &quot;Order Status&quot;, &quot;hidden&quot;: false, &quot;sealed&quot;: false,
     &quot;abstract&quot;: false, &quot;version&quot;: &quot;1.1&quot;, &quot;caching&quot;:&quot;always&quot;
@@ -456,6 +457,8 @@ DataModel.caching property indicates whether data will be cached or not.</p>
 <script>prettyPrint();</script>
 <script src="scripts/linenumber.js"></script>
 <script src="scripts/jquery.min.js"></script>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-route.min.js"></script>
 <script src="scripts/layout.js"></script>
 
 </body>
