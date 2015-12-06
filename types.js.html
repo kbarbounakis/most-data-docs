@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>types.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-theme.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AccessDeniedException.html">AccessDeniedException</a></li><li><i class='ionicons ion-ios-minus'></i><a href="CalculatedValueListener.html">CalculatedValueListener</a><ul class='methods'><li data-type='method'><a href="CalculatedValueListener.html#beforeSave">beforeSave</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataAdapter.html">DataAdapter</a><ul class='methods'><li data-type='method'><a href="DataAdapter.html#close">close</a></li><li data-type='method'><a href="DataAdapter.html#createView">createView</a></li><li data-type='method'><a href="DataAdapter.html#execute">execute</a></li><li data-type='method'><a href="DataAdapter.html#executeBatch">executeBatch</a></li><li data-type='method'><a href="DataAdapter.html#executeInTransaction">executeInTransaction</a></li><li data-type='method'><a href="DataAdapter.html#open">open</a></li><li data-type='method'><a href="DataAdapter.html#selectIdentity">selectIdentity</a></li></ul></li><li><a href="DataAssociationMapping.html">DataAssociationMapping</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataCache.html">DataCache</a><ul class='methods'><li data-type='method'><a href="DataCache.html#add">add</a></li><li data-type='method'><a href="DataCache.html#emit">emit</a></li><li data-type='method'><a href="DataCache.html#ensure">ensure</a></li><li data-type='method'><a href="DataCache.html#get">get</a></li><li data-type='method'><a href="DataCache.html#init">init</a></li><li data-type='method'><a href="DataCache.html#remove">remove</a></li><li data-type='method'><a href="DataCache.html#removeAll">removeAll</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataCachingListener.html">DataCachingListener</a><ul class='methods'><li data-type='method'><a href="DataCachingListener.html#afterExecute">afterExecute</a></li><li data-type='method'><a href="DataCachingListener.html#beforeExecute">beforeExecute</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataConfiguration.html">DataConfiguration</a><ul class='methods'><li data-type='method'><a href="DataConfiguration.html#model">model</a></li></ul></li><li><a href="DataConfigurationAuth.html">DataConfigurationAuth</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataContext.html">DataContext</a><ul class='methods'><li data-type='method'><a href="DataContext.html#emit">emit</a></li><li data-type='method'><a href="DataContext.html#finalize">finalize</a></li><li data-type='method'><a href="DataContext.html#model">model</a></li></ul></li><li><a href="DataEventArgs.html">DataEventArgs</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataEventListener.html">DataEventListener</a><ul class='methods'><li data-type='method'><a href="DataEventListener.html#afterExecute">afterExecute</a></li><li data-type='method'><a href="DataEventListener.html#afterRemove">afterRemove</a></li><li data-type='method'><a href="DataEventListener.html#afterSave">afterSave</a></li><li data-type='method'><a href="DataEventListener.html#beforeExecute">beforeExecute</a></li><li data-type='method'><a href="DataEventListener.html#beforeRemove">beforeRemove</a></li><li data-type='method'><a href="DataEventListener.html#beforeSave">beforeSave</a></li></ul></li><li><a href="DataException.html">DataException</a></li><li><a href="DataField.html">DataField</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataFilterResolver.html">DataFilterResolver</a><ul class='methods'><li data-type='method'><a href="DataFilterResolver.html#all">all</a></li><li data-type='method'><a href="DataFilterResolver.html#asQueryable">asQueryable</a></li><li data-type='method'><a href="DataFilterResolver.html#base">base</a></li><li data-type='method'><a href="DataFilterResolver.html#cast">cast</a></li><li data-type='method'><a href="DataFilterResolver.html#clone">clone</a></li><li data-type='method'><a href="DataFilterResolver.html#convert">convert</a></li><li data-type='method'><a href="DataFilterResolver.html#dataviews">dataviews</a></li><li data-type='method'><a href="DataFilterResolver.html#field">field</a></li><li data-type='method'><a href="DataFilterResolver.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="DataFilterResolver.html#filter">filter</a></li><li data-type='method'><a href="DataFilterResolver.html#find">find</a></li><li data-type='method'><a href="DataFilterResolver.html#first">first</a></li><li data-type='method'><a href="DataFilterResolver.html#get">get</a></li><li data-type='method'><a href="DataFilterResolver.html#idOf">idOf</a></li><li data-type='method'><a href="DataFilterResolver.html#inferMapping">inferMapping</a></li><li data-type='method'><a href="DataFilterResolver.html#inferState">inferState</a></li><li data-type='method'><a href="DataFilterResolver.html#initialize">initialize</a></li><li data-type='method'><a href="DataFilterResolver.html#insert">insert</a></li><li data-type='method'><a href="DataFilterResolver.html#key">key</a></li><li data-type='method'><a href="DataFilterResolver.html#last">last</a></li><li data-type='method'><a href="DataFilterResolver.html#list">list</a></li><li data-type='method'><a href="DataFilterResolver.html#max">max</a></li><li data-type='method'><a href="DataFilterResolver.html#me">me</a></li><li data-type='method'><a href="DataFilterResolver.html#migrate">migrate</a></li><li data-type='method'><a href="DataFilterResolver.html#min">min</a></li><li data-type='method'><a href="DataFilterResolver.html#new">new</a></li><li data-type='method'><a href="DataFilterResolver.html#now">now</a></li><li data-type='method'><a href="DataFilterResolver.html#orderBy">orderBy</a></li><li data-type='method'><a href="DataFilterResolver.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="DataFilterResolver.html#recast">recast</a></li><li data-type='method'><a href="DataFilterResolver.html#remove">remove</a></li><li data-type='method'><a href="DataFilterResolver.html#save">save</a></li><li data-type='method'><a href="DataFilterResolver.html#select">select</a></li><li data-type='method'><a href="DataFilterResolver.html#silent">silent</a></li><li data-type='method'><a href="DataFilterResolver.html#skip">skip</a></li><li data-type='method'><a href="DataFilterResolver.html#take">take</a></li><li data-type='method'><a href="DataFilterResolver.html#today">today</a></li><li data-type='method'><a href="DataFilterResolver.html#update">update</a></li><li data-type='method'><a href="DataFilterResolver.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataModel.html">DataModel</a><ul class='methods'><li data-type='method'><a href="DataModel.html#all">all</a></li><li data-type='method'><a href="DataModel.html#asQueryable">asQueryable</a></li><li data-type='method'><a href="DataModel.html#base">base</a></li><li data-type='method'><a href="DataModel.html#cast">cast</a></li><li data-type='method'><a href="DataModel.html#clone">clone</a></li><li data-type='method'><a href="DataModel.html#convert">convert</a></li><li data-type='method'><a href="DataModel.html#dataviews">dataviews</a></li><li data-type='method'><a href="DataModel.html#emit">emit</a></li><li data-type='method'><a href="DataModel.html#field">field</a></li><li data-type='method'><a href="DataModel.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="DataModel.html#filter">filter</a></li><li data-type='method'><a href="DataModel.html#find">find</a></li><li data-type='method'><a href="DataModel.html#first">first</a></li><li data-type='method'><a href="DataModel.html#get">get</a></li><li data-type='method'><a href="DataModel.html#idOf">idOf</a></li><li data-type='method'><a href="DataModel.html#inferMapping">inferMapping</a></li><li data-type='method'><a href="DataModel.html#inferState">inferState</a></li><li data-type='method'><a href="DataModel.html#initialize">initialize</a></li><li data-type='method'><a href="DataModel.html#insert">insert</a></li><li data-type='method'><a href="DataModel.html#key">key</a></li><li data-type='method'><a href="DataModel.html#last">last</a></li><li data-type='method'><a href="DataModel.html#list">list</a></li><li data-type='method'><a href="DataModel.html#max">max</a></li><li data-type='method'><a href="DataModel.html#migrate">migrate</a></li><li data-type='method'><a href="DataModel.html#min">min</a></li><li data-type='method'><a href="DataModel.html#new">new</a></li><li data-type='method'><a href="DataModel.html#orderBy">orderBy</a></li><li data-type='method'><a href="DataModel.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="DataModel.html#recast">recast</a></li><li data-type='method'><a href="DataModel.html#remove">remove</a></li><li data-type='method'><a href="DataModel.html#save">save</a></li><li data-type='method'><a href="DataModel.html#select">select</a></li><li data-type='method'><a href="DataModel.html#silent">silent</a></li><li data-type='method'><a href="DataModel.html#skip">skip</a></li><li data-type='method'><a href="DataModel.html#take">take</a></li><li data-type='method'><a href="DataModel.html#update">update</a></li><li data-type='method'><a href="DataModel.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataModelBatch.html">DataModelBatch</a><ul class='methods'><li data-type='method'><a href="DataModelBatch.html#prepare">prepare</a></li></ul></li><li><a href="DataModelEventListener.html">DataModelEventListener</a></li><li><a href="DataModelMigration.html">DataModelMigration</a></li><li><a href="DataModelPrivilege.html">DataModelPrivilege</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataModelView.html">DataModelView</a><ul class='methods'><li data-type='method'><a href="DataModelView.html#cast">cast</a></li></ul></li><li><a href="DataNotFoundException.html">DataNotFoundException</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataObject.html">DataObject</a><ul class='methods'><li data-type='method'><a href="DataObject.html#attr">attr</a></li><li data-type='method'><a href="DataObject.html#attrOf">attrOf</a></li><li data-type='method'><a href="DataObject.html#emit">emit</a></li><li data-type='method'><a href="DataObject.html#getModel">getModel</a></li><li data-type='method'><a href="DataObject.html#idOf">idOf</a></li><li data-type='method'><a href="DataObject.html#is">is</a></li><li data-type='method'><a href="DataObject.html#property">property</a></li><li data-type='method'><a href="DataObject.html#query">query</a></li><li data-type='method'><a href="DataObject.html#remove">remove</a></li><li data-type='method'><a href="DataObject.html#save">save</a></li><li data-type='method'><a href="DataObject.html#selector">selector</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataObjectAssociationListener.html">DataObjectAssociationListener</a><ul class='methods'><li data-type='method'><a href="DataObjectAssociationListener.html#afterSave">afterSave</a></li><li data-type='method'><a href="DataObjectAssociationListener.html#beforeSave">beforeSave</a></li></ul></li><li><a href="DataObjectCachingListener.html">DataObjectCachingListener</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataObjectJunction.html">DataObjectJunction</a><ul class='methods'><li data-type='method'><a href="DataObjectJunction.html#add">add</a></li><li data-type='method'><a href="DataObjectJunction.html#all">all</a></li><li data-type='method'><a href="DataObjectJunction.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="DataObjectJunction.html#and">and</a></li><li data-type='method'><a href="DataObjectJunction.html#asArray">asArray</a></li><li data-type='method'><a href="DataObjectJunction.html#average">average</a></li><li data-type='method'><a href="DataObjectJunction.html#between">between</a></li><li data-type='method'><a href="DataObjectJunction.html#bit">bit</a></li><li data-type='method'><a href="DataObjectJunction.html#cache">cache</a></li><li data-type='method'><a href="DataObjectJunction.html#ceil">ceil</a></li><li data-type='method'><a href="DataObjectJunction.html#clear">clear</a></li><li data-type='method'><a href="DataObjectJunction.html#clone">clone</a></li><li data-type='method'><a href="DataObjectJunction.html#concat">concat</a></li><li data-type='method'><a href="DataObjectJunction.html#contains">contains</a></li><li data-type='method'><a href="DataObjectJunction.html#count">count</a></li><li data-type='method'><a href="DataObjectJunction.html#countOf">countOf</a></li><li data-type='method'><a href="DataObjectJunction.html#data">data</a></li><li data-type='method'><a href="DataObjectJunction.html#divide">divide</a></li><li data-type='method'><a href="DataObjectJunction.html#endsWith">endsWith</a></li><li data-type='method'><a href="DataObjectJunction.html#equal">equal</a></li><li data-type='method'><a href="DataObjectJunction.html#expand">expand</a></li><li data-type='method'><a href="DataObjectJunction.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="DataObjectJunction.html#first">first</a></li><li data-type='method'><a href="DataObjectJunction.html#flatten">flatten</a></li><li data-type='method'><a href="DataObjectJunction.html#floor">floor</a></li><li data-type='method'><a href="DataObjectJunction.html#getDate">getDate</a></li><li data-type='method'><a href="DataObjectJunction.html#getDay">getDay</a></li><li data-type='method'><a href="DataObjectJunction.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="DataObjectJunction.html#getHours">getHours</a></li><li data-type='method'><a href="DataObjectJunction.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="DataObjectJunction.html#getMonth">getMonth</a></li><li data-type='method'><a href="DataObjectJunction.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="DataObjectJunction.html#getYear">getYear</a></li><li data-type='method'><a href="DataObjectJunction.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="DataObjectJunction.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="DataObjectJunction.html#groupBy">groupBy</a></li><li data-type='method'><a href="DataObjectJunction.html#in">in</a></li><li data-type='method'><a href="DataObjectJunction.html#indexOf">indexOf</a></li><li data-type='method'><a href="DataObjectJunction.html#insert">insert</a></li><li data-type='method'><a href="DataObjectJunction.html#is">is</a></li><li data-type='method'><a href="DataObjectJunction.html#length">length</a></li><li data-type='method'><a href="DataObjectJunction.html#list">list</a></li><li data-type='method'><a href="DataObjectJunction.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="DataObjectJunction.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="DataObjectJunction.html#max">max</a></li><li data-type='method'><a href="DataObjectJunction.html#migrate">migrate</a></li><li data-type='method'><a href="DataObjectJunction.html#migrate">migrate</a></li><li data-type='method'><a href="DataObjectJunction.html#min">min</a></li><li data-type='method'><a href="DataObjectJunction.html#mod">mod</a></li><li data-type='method'><a href="DataObjectJunction.html#multiply">multiply</a></li><li data-type='method'><a href="DataObjectJunction.html#notContains">notContains</a></li><li data-type='method'><a href="DataObjectJunction.html#notEqual">notEqual</a></li><li data-type='method'><a href="DataObjectJunction.html#notIn">notIn</a></li><li data-type='method'><a href="DataObjectJunction.html#or">or</a></li><li data-type='method'><a href="DataObjectJunction.html#orderBy">orderBy</a></li><li data-type='method'><a href="DataObjectJunction.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="DataObjectJunction.html#prepare">prepare</a></li><li data-type='method'><a href="DataObjectJunction.html#remove">remove</a></li><li data-type='method'><a href="DataObjectJunction.html#round">round</a></li><li data-type='method'><a href="DataObjectJunction.html#select">select</a></li><li data-type='method'><a href="DataObjectJunction.html#silent">silent</a></li><li data-type='method'><a href="DataObjectJunction.html#skip">skip</a></li><li data-type='method'><a href="DataObjectJunction.html#startsWith">startsWith</a></li><li data-type='method'><a href="DataObjectJunction.html#substr">substr</a></li><li data-type='method'><a href="DataObjectJunction.html#subtract">subtract</a></li><li data-type='method'><a href="DataObjectJunction.html#sumOf">sumOf</a></li><li data-type='method'><a href="DataObjectJunction.html#take">take</a></li><li data-type='method'><a href="DataObjectJunction.html#thenBy">thenBy</a></li><li data-type='method'><a href="DataObjectJunction.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="DataObjectJunction.html#title">title</a></li><li data-type='method'><a href="DataObjectJunction.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="DataObjectJunction.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="DataObjectJunction.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="DataObjectJunction.html#toMD5">toMD5</a></li><li data-type='method'><a href="DataObjectJunction.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="DataObjectJunction.html#trim">trim</a></li><li data-type='method'><a href="DataObjectJunction.html#value">value</a></li><li data-type='method'><a href="DataObjectJunction.html#where">where</a></li></ul></li><li><a href="DataPermissionEventArgs.html">DataPermissionEventArgs</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataPermissionEventListener.html">DataPermissionEventListener</a><ul class='methods'><li data-type='method'><a href="DataPermissionEventListener.html#beforeExecute">beforeExecute</a></li><li data-type='method'><a href="DataPermissionEventListener.html#beforeRemove">beforeRemove</a></li><li data-type='method'><a href="DataPermissionEventListener.html#beforeSave">beforeSave</a></li><li data-type='method'><a href="DataPermissionEventListener.html#validate">validate</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataQueryable.html">DataQueryable</a><ul class='methods'><li data-type='method'><a href="DataQueryable.html#add">add</a></li><li data-type='method'><a href="DataQueryable.html#all">all</a></li><li data-type='method'><a href="DataQueryable.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="DataQueryable.html#and">and</a></li><li data-type='method'><a href="DataQueryable.html#asArray">asArray</a></li><li data-type='method'><a href="DataQueryable.html#average">average</a></li><li data-type='method'><a href="DataQueryable.html#between">between</a></li><li data-type='method'><a href="DataQueryable.html#bit">bit</a></li><li data-type='method'><a href="DataQueryable.html#cache">cache</a></li><li data-type='method'><a href="DataQueryable.html#ceil">ceil</a></li><li data-type='method'><a href="DataQueryable.html#clone">clone</a></li><li data-type='method'><a href="DataQueryable.html#concat">concat</a></li><li data-type='method'><a href="DataQueryable.html#contains">contains</a></li><li data-type='method'><a href="DataQueryable.html#count">count</a></li><li data-type='method'><a href="DataQueryable.html#countOf">countOf</a></li><li data-type='method'><a href="DataQueryable.html#data">data</a></li><li data-type='method'><a href="DataQueryable.html#divide">divide</a></li><li data-type='method'><a href="DataQueryable.html#endsWith">endsWith</a></li><li data-type='method'><a href="DataQueryable.html#equal">equal</a></li><li data-type='method'><a href="DataQueryable.html#expand">expand</a></li><li data-type='method'><a href="DataQueryable.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="DataQueryable.html#first">first</a></li><li data-type='method'><a href="DataQueryable.html#flatten">flatten</a></li><li data-type='method'><a href="DataQueryable.html#floor">floor</a></li><li data-type='method'><a href="DataQueryable.html#getDate">getDate</a></li><li data-type='method'><a href="DataQueryable.html#getDay">getDay</a></li><li data-type='method'><a href="DataQueryable.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="DataQueryable.html#getHours">getHours</a></li><li data-type='method'><a href="DataQueryable.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="DataQueryable.html#getMonth">getMonth</a></li><li data-type='method'><a href="DataQueryable.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="DataQueryable.html#getYear">getYear</a></li><li data-type='method'><a href="DataQueryable.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="DataQueryable.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="DataQueryable.html#groupBy">groupBy</a></li><li data-type='method'><a href="DataQueryable.html#in">in</a></li><li data-type='method'><a href="DataQueryable.html#indexOf">indexOf</a></li><li data-type='method'><a href="DataQueryable.html#is">is</a></li><li data-type='method'><a href="DataQueryable.html#length">length</a></li><li data-type='method'><a href="DataQueryable.html#list">list</a></li><li data-type='method'><a href="DataQueryable.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="DataQueryable.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="DataQueryable.html#max">max</a></li><li data-type='method'><a href="DataQueryable.html#migrate">migrate</a></li><li data-type='method'><a href="DataQueryable.html#min">min</a></li><li data-type='method'><a href="DataQueryable.html#mod">mod</a></li><li data-type='method'><a href="DataQueryable.html#multiply">multiply</a></li><li data-type='method'><a href="DataQueryable.html#notContains">notContains</a></li><li data-type='method'><a href="DataQueryable.html#notEqual">notEqual</a></li><li data-type='method'><a href="DataQueryable.html#notIn">notIn</a></li><li data-type='method'><a href="DataQueryable.html#or">or</a></li><li data-type='method'><a href="DataQueryable.html#orderBy">orderBy</a></li><li data-type='method'><a href="DataQueryable.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="DataQueryable.html#prepare">prepare</a></li><li data-type='method'><a href="DataQueryable.html#round">round</a></li><li data-type='method'><a href="DataQueryable.html#select">select</a></li><li data-type='method'><a href="DataQueryable.html#silent">silent</a></li><li data-type='method'><a href="DataQueryable.html#skip">skip</a></li><li data-type='method'><a href="DataQueryable.html#startsWith">startsWith</a></li><li data-type='method'><a href="DataQueryable.html#substr">substr</a></li><li data-type='method'><a href="DataQueryable.html#subtract">subtract</a></li><li data-type='method'><a href="DataQueryable.html#sumOf">sumOf</a></li><li data-type='method'><a href="DataQueryable.html#take">take</a></li><li data-type='method'><a href="DataQueryable.html#thenBy">thenBy</a></li><li data-type='method'><a href="DataQueryable.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="DataQueryable.html#title">title</a></li><li data-type='method'><a href="DataQueryable.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="DataQueryable.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="DataQueryable.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="DataQueryable.html#toMD5">toMD5</a></li><li data-type='method'><a href="DataQueryable.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="DataQueryable.html#trim">trim</a></li><li data-type='method'><a href="DataQueryable.html#value">value</a></li><li data-type='method'><a href="DataQueryable.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataQueryableField.html">DataQueryableField</a><ul class='methods'><li data-type='method'><a href="DataQueryableField.html#as">as</a></li><li data-type='method'><a href="DataQueryableField.html#average">average</a></li><li data-type='method'><a href="DataQueryableField.html#count">count</a></li><li data-type='method'><a href="DataQueryableField.html#floor">floor</a></li><li data-type='method'><a href="DataQueryableField.html#getDate">getDate</a></li><li data-type='method'><a href="DataQueryableField.html#getDay">getDay</a></li><li data-type='method'><a href="DataQueryableField.html#getHours">getHours</a></li><li data-type='method'><a href="DataQueryableField.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="DataQueryableField.html#getMonth">getMonth</a></li><li data-type='method'><a href="DataQueryableField.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="DataQueryableField.html#getYear">getYear</a></li><li data-type='method'><a href="DataQueryableField.html#length">length</a></li><li data-type='method'><a href="DataQueryableField.html#max">max</a></li><li data-type='method'><a href="DataQueryableField.html#min">min</a></li><li data-type='method'><a href="DataQueryableField.html#round">round</a></li><li data-type='method'><a href="DataQueryableField.html#substr">substr</a></li><li data-type='method'><a href="DataQueryableField.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="DataQueryableField.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="DataQueryableField.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="DataQueryableField.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="DataQueryableField.html#trim">trim</a></li></ul></li><li><a href="DataResultSet.html">DataResultSet</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataStateValidatorListener.html">DataStateValidatorListener</a><ul class='methods'><li data-type='method'><a href="DataStateValidatorListener.html#beforeRemove">beforeRemove</a></li><li data-type='method'><a href="DataStateValidatorListener.html#beforeSave">beforeSave</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DefaultDataContext.html">DefaultDataContext</a><ul class='methods'><li data-type='method'><a href="DefaultDataContext.html#finalize">finalize</a></li><li data-type='method'><a href="DefaultDataContext.html#model">model</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DefaultValueListener.html">DefaultValueListener</a><ul class='methods'><li data-type='method'><a href="DefaultValueListener.html#beforeSave">beforeSave</a></li></ul></li><li><a href="EmptyQueryExpression.html">EmptyQueryExpression</a></li><li><i class='ionicons ion-ios-minus'></i><a href="EventEmitter2.html">EventEmitter2</a><ul class='methods'><li data-type='method'><a href="EventEmitter2.html#emit">emit</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="FunctionContext.html">FunctionContext</a><ul class='methods'><li data-type='method'><a href="FunctionContext.html#int">int</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HasManyAssociation.html">HasManyAssociation</a><ul class='methods'><li data-type='method'><a href="HasManyAssociation.html#add">add</a></li><li data-type='method'><a href="HasManyAssociation.html#all">all</a></li><li data-type='method'><a href="HasManyAssociation.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="HasManyAssociation.html#and">and</a></li><li data-type='method'><a href="HasManyAssociation.html#asArray">asArray</a></li><li data-type='method'><a href="HasManyAssociation.html#average">average</a></li><li data-type='method'><a href="HasManyAssociation.html#between">between</a></li><li data-type='method'><a href="HasManyAssociation.html#bit">bit</a></li><li data-type='method'><a href="HasManyAssociation.html#cache">cache</a></li><li data-type='method'><a href="HasManyAssociation.html#ceil">ceil</a></li><li data-type='method'><a href="HasManyAssociation.html#clone">clone</a></li><li data-type='method'><a href="HasManyAssociation.html#concat">concat</a></li><li data-type='method'><a href="HasManyAssociation.html#contains">contains</a></li><li data-type='method'><a href="HasManyAssociation.html#count">count</a></li><li data-type='method'><a href="HasManyAssociation.html#countOf">countOf</a></li><li data-type='method'><a href="HasManyAssociation.html#data">data</a></li><li data-type='method'><a href="HasManyAssociation.html#divide">divide</a></li><li data-type='method'><a href="HasManyAssociation.html#endsWith">endsWith</a></li><li data-type='method'><a href="HasManyAssociation.html#equal">equal</a></li><li data-type='method'><a href="HasManyAssociation.html#expand">expand</a></li><li data-type='method'><a href="HasManyAssociation.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="HasManyAssociation.html#first">first</a></li><li data-type='method'><a href="HasManyAssociation.html#flatten">flatten</a></li><li data-type='method'><a href="HasManyAssociation.html#floor">floor</a></li><li data-type='method'><a href="HasManyAssociation.html#getDate">getDate</a></li><li data-type='method'><a href="HasManyAssociation.html#getDay">getDay</a></li><li data-type='method'><a href="HasManyAssociation.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="HasManyAssociation.html#getHours">getHours</a></li><li data-type='method'><a href="HasManyAssociation.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="HasManyAssociation.html#getMonth">getMonth</a></li><li data-type='method'><a href="HasManyAssociation.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="HasManyAssociation.html#getYear">getYear</a></li><li data-type='method'><a href="HasManyAssociation.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="HasManyAssociation.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="HasManyAssociation.html#groupBy">groupBy</a></li><li data-type='method'><a href="HasManyAssociation.html#in">in</a></li><li data-type='method'><a href="HasManyAssociation.html#indexOf">indexOf</a></li><li data-type='method'><a href="HasManyAssociation.html#is">is</a></li><li data-type='method'><a href="HasManyAssociation.html#length">length</a></li><li data-type='method'><a href="HasManyAssociation.html#list">list</a></li><li data-type='method'><a href="HasManyAssociation.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="HasManyAssociation.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="HasManyAssociation.html#max">max</a></li><li data-type='method'><a href="HasManyAssociation.html#migrate">migrate</a></li><li data-type='method'><a href="HasManyAssociation.html#min">min</a></li><li data-type='method'><a href="HasManyAssociation.html#mod">mod</a></li><li data-type='method'><a href="HasManyAssociation.html#multiply">multiply</a></li><li data-type='method'><a href="HasManyAssociation.html#notContains">notContains</a></li><li data-type='method'><a href="HasManyAssociation.html#notEqual">notEqual</a></li><li data-type='method'><a href="HasManyAssociation.html#notIn">notIn</a></li><li data-type='method'><a href="HasManyAssociation.html#or">or</a></li><li data-type='method'><a href="HasManyAssociation.html#orderBy">orderBy</a></li><li data-type='method'><a href="HasManyAssociation.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="HasManyAssociation.html#prepare">prepare</a></li><li data-type='method'><a href="HasManyAssociation.html#round">round</a></li><li data-type='method'><a href="HasManyAssociation.html#select">select</a></li><li data-type='method'><a href="HasManyAssociation.html#silent">silent</a></li><li data-type='method'><a href="HasManyAssociation.html#skip">skip</a></li><li data-type='method'><a href="HasManyAssociation.html#startsWith">startsWith</a></li><li data-type='method'><a href="HasManyAssociation.html#substr">substr</a></li><li data-type='method'><a href="HasManyAssociation.html#subtract">subtract</a></li><li data-type='method'><a href="HasManyAssociation.html#sumOf">sumOf</a></li><li data-type='method'><a href="HasManyAssociation.html#take">take</a></li><li data-type='method'><a href="HasManyAssociation.html#thenBy">thenBy</a></li><li data-type='method'><a href="HasManyAssociation.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="HasManyAssociation.html#title">title</a></li><li data-type='method'><a href="HasManyAssociation.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="HasManyAssociation.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="HasManyAssociation.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="HasManyAssociation.html#toMD5">toMD5</a></li><li data-type='method'><a href="HasManyAssociation.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="HasManyAssociation.html#trim">trim</a></li><li data-type='method'><a href="HasManyAssociation.html#value">value</a></li><li data-type='method'><a href="HasManyAssociation.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HasOneAssociation.html">HasOneAssociation</a><ul class='methods'><li data-type='method'><a href="HasOneAssociation.html#add">add</a></li><li data-type='method'><a href="HasOneAssociation.html#all">all</a></li><li data-type='method'><a href="HasOneAssociation.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="HasOneAssociation.html#and">and</a></li><li data-type='method'><a href="HasOneAssociation.html#asArray">asArray</a></li><li data-type='method'><a href="HasOneAssociation.html#average">average</a></li><li data-type='method'><a href="HasOneAssociation.html#between">between</a></li><li data-type='method'><a href="HasOneAssociation.html#bit">bit</a></li><li data-type='method'><a href="HasOneAssociation.html#cache">cache</a></li><li data-type='method'><a href="HasOneAssociation.html#ceil">ceil</a></li><li data-type='method'><a href="HasOneAssociation.html#clone">clone</a></li><li data-type='method'><a href="HasOneAssociation.html#concat">concat</a></li><li data-type='method'><a href="HasOneAssociation.html#contains">contains</a></li><li data-type='method'><a href="HasOneAssociation.html#count">count</a></li><li data-type='method'><a href="HasOneAssociation.html#countOf">countOf</a></li><li data-type='method'><a href="HasOneAssociation.html#data">data</a></li><li data-type='method'><a href="HasOneAssociation.html#divide">divide</a></li><li data-type='method'><a href="HasOneAssociation.html#endsWith">endsWith</a></li><li data-type='method'><a href="HasOneAssociation.html#equal">equal</a></li><li data-type='method'><a href="HasOneAssociation.html#expand">expand</a></li><li data-type='method'><a href="HasOneAssociation.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="HasOneAssociation.html#first">first</a></li><li data-type='method'><a href="HasOneAssociation.html#flatten">flatten</a></li><li data-type='method'><a href="HasOneAssociation.html#floor">floor</a></li><li data-type='method'><a href="HasOneAssociation.html#getDate">getDate</a></li><li data-type='method'><a href="HasOneAssociation.html#getDay">getDay</a></li><li data-type='method'><a href="HasOneAssociation.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="HasOneAssociation.html#getHours">getHours</a></li><li data-type='method'><a href="HasOneAssociation.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="HasOneAssociation.html#getMonth">getMonth</a></li><li data-type='method'><a href="HasOneAssociation.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="HasOneAssociation.html#getYear">getYear</a></li><li data-type='method'><a href="HasOneAssociation.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="HasOneAssociation.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="HasOneAssociation.html#groupBy">groupBy</a></li><li data-type='method'><a href="HasOneAssociation.html#in">in</a></li><li data-type='method'><a href="HasOneAssociation.html#indexOf">indexOf</a></li><li data-type='method'><a href="HasOneAssociation.html#is">is</a></li><li data-type='method'><a href="HasOneAssociation.html#length">length</a></li><li data-type='method'><a href="HasOneAssociation.html#list">list</a></li><li data-type='method'><a href="HasOneAssociation.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="HasOneAssociation.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="HasOneAssociation.html#max">max</a></li><li data-type='method'><a href="HasOneAssociation.html#migrate">migrate</a></li><li data-type='method'><a href="HasOneAssociation.html#min">min</a></li><li data-type='method'><a href="HasOneAssociation.html#mod">mod</a></li><li data-type='method'><a href="HasOneAssociation.html#multiply">multiply</a></li><li data-type='method'><a href="HasOneAssociation.html#notContains">notContains</a></li><li data-type='method'><a href="HasOneAssociation.html#notEqual">notEqual</a></li><li data-type='method'><a href="HasOneAssociation.html#notIn">notIn</a></li><li data-type='method'><a href="HasOneAssociation.html#or">or</a></li><li data-type='method'><a href="HasOneAssociation.html#orderBy">orderBy</a></li><li data-type='method'><a href="HasOneAssociation.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="HasOneAssociation.html#prepare">prepare</a></li><li data-type='method'><a href="HasOneAssociation.html#round">round</a></li><li data-type='method'><a href="HasOneAssociation.html#select">select</a></li><li data-type='method'><a href="HasOneAssociation.html#silent">silent</a></li><li data-type='method'><a href="HasOneAssociation.html#skip">skip</a></li><li data-type='method'><a href="HasOneAssociation.html#startsWith">startsWith</a></li><li data-type='method'><a href="HasOneAssociation.html#substr">substr</a></li><li data-type='method'><a href="HasOneAssociation.html#subtract">subtract</a></li><li data-type='method'><a href="HasOneAssociation.html#sumOf">sumOf</a></li><li data-type='method'><a href="HasOneAssociation.html#take">take</a></li><li data-type='method'><a href="HasOneAssociation.html#thenBy">thenBy</a></li><li data-type='method'><a href="HasOneAssociation.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="HasOneAssociation.html#title">title</a></li><li data-type='method'><a href="HasOneAssociation.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="HasOneAssociation.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="HasOneAssociation.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="HasOneAssociation.html#toMD5">toMD5</a></li><li data-type='method'><a href="HasOneAssociation.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="HasOneAssociation.html#trim">trim</a></li><li data-type='method'><a href="HasOneAssociation.html#value">value</a></li><li data-type='method'><a href="HasOneAssociation.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HasParentJunction.html">HasParentJunction</a><ul class='methods'><li data-type='method'><a href="HasParentJunction.html#add">add</a></li><li data-type='method'><a href="HasParentJunction.html#all">all</a></li><li data-type='method'><a href="HasParentJunction.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="HasParentJunction.html#and">and</a></li><li data-type='method'><a href="HasParentJunction.html#asArray">asArray</a></li><li data-type='method'><a href="HasParentJunction.html#average">average</a></li><li data-type='method'><a href="HasParentJunction.html#between">between</a></li><li data-type='method'><a href="HasParentJunction.html#bit">bit</a></li><li data-type='method'><a href="HasParentJunction.html#cache">cache</a></li><li data-type='method'><a href="HasParentJunction.html#ceil">ceil</a></li><li data-type='method'><a href="HasParentJunction.html#clone">clone</a></li><li data-type='method'><a href="HasParentJunction.html#concat">concat</a></li><li data-type='method'><a href="HasParentJunction.html#contains">contains</a></li><li data-type='method'><a href="HasParentJunction.html#count">count</a></li><li data-type='method'><a href="HasParentJunction.html#countOf">countOf</a></li><li data-type='method'><a href="HasParentJunction.html#data">data</a></li><li data-type='method'><a href="HasParentJunction.html#divide">divide</a></li><li data-type='method'><a href="HasParentJunction.html#endsWith">endsWith</a></li><li data-type='method'><a href="HasParentJunction.html#equal">equal</a></li><li data-type='method'><a href="HasParentJunction.html#expand">expand</a></li><li data-type='method'><a href="HasParentJunction.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="HasParentJunction.html#first">first</a></li><li data-type='method'><a href="HasParentJunction.html#flatten">flatten</a></li><li data-type='method'><a href="HasParentJunction.html#floor">floor</a></li><li data-type='method'><a href="HasParentJunction.html#getDate">getDate</a></li><li data-type='method'><a href="HasParentJunction.html#getDay">getDay</a></li><li data-type='method'><a href="HasParentJunction.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="HasParentJunction.html#getHours">getHours</a></li><li data-type='method'><a href="HasParentJunction.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="HasParentJunction.html#getMonth">getMonth</a></li><li data-type='method'><a href="HasParentJunction.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="HasParentJunction.html#getYear">getYear</a></li><li data-type='method'><a href="HasParentJunction.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="HasParentJunction.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="HasParentJunction.html#groupBy">groupBy</a></li><li data-type='method'><a href="HasParentJunction.html#in">in</a></li><li data-type='method'><a href="HasParentJunction.html#indexOf">indexOf</a></li><li data-type='method'><a href="HasParentJunction.html#insert">insert</a></li><li data-type='method'><a href="HasParentJunction.html#is">is</a></li><li data-type='method'><a href="HasParentJunction.html#length">length</a></li><li data-type='method'><a href="HasParentJunction.html#list">list</a></li><li data-type='method'><a href="HasParentJunction.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="HasParentJunction.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="HasParentJunction.html#max">max</a></li><li data-type='method'><a href="HasParentJunction.html#migrate">migrate</a></li><li data-type='method'><a href="HasParentJunction.html#min">min</a></li><li data-type='method'><a href="HasParentJunction.html#mod">mod</a></li><li data-type='method'><a href="HasParentJunction.html#multiply">multiply</a></li><li data-type='method'><a href="HasParentJunction.html#notContains">notContains</a></li><li data-type='method'><a href="HasParentJunction.html#notEqual">notEqual</a></li><li data-type='method'><a href="HasParentJunction.html#notIn">notIn</a></li><li data-type='method'><a href="HasParentJunction.html#or">or</a></li><li data-type='method'><a href="HasParentJunction.html#orderBy">orderBy</a></li><li data-type='method'><a href="HasParentJunction.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="HasParentJunction.html#prepare">prepare</a></li><li data-type='method'><a href="HasParentJunction.html#remove">remove</a></li><li data-type='method'><a href="HasParentJunction.html#round">round</a></li><li data-type='method'><a href="HasParentJunction.html#select">select</a></li><li data-type='method'><a href="HasParentJunction.html#silent">silent</a></li><li data-type='method'><a href="HasParentJunction.html#skip">skip</a></li><li data-type='method'><a href="HasParentJunction.html#startsWith">startsWith</a></li><li data-type='method'><a href="HasParentJunction.html#substr">substr</a></li><li data-type='method'><a href="HasParentJunction.html#subtract">subtract</a></li><li data-type='method'><a href="HasParentJunction.html#sumOf">sumOf</a></li><li data-type='method'><a href="HasParentJunction.html#take">take</a></li><li data-type='method'><a href="HasParentJunction.html#thenBy">thenBy</a></li><li data-type='method'><a href="HasParentJunction.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="HasParentJunction.html#title">title</a></li><li data-type='method'><a href="HasParentJunction.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="HasParentJunction.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="HasParentJunction.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="HasParentJunction.html#toMD5">toMD5</a></li><li data-type='method'><a href="HasParentJunction.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="HasParentJunction.html#trim">trim</a></li><li data-type='method'><a href="HasParentJunction.html#value">value</a></li><li data-type='method'><a href="HasParentJunction.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="NamedDataContext.html">NamedDataContext</a><ul class='methods'><li data-type='method'><a href="NamedDataContext.html#emit">emit</a></li><li data-type='method'><a href="NamedDataContext.html#finalize">finalize</a></li><li data-type='method'><a href="NamedDataContext.html#model">model</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="NotNullConstraintListener.html">NotNullConstraintListener</a><ul class='methods'><li data-type='method'><a href="NotNullConstraintListener.html#beforeSave">beforeSave</a></li></ul></li><li><a href="NotNullException.html">NotNullException</a></li><li><a href="UniqueConstraintException.html">UniqueConstraintException</a></li><li><i class='ionicons ion-ios-minus'></i><a href="UniqueContraintListener.html">UniqueContraintListener</a><ul class='methods'><li data-type='method'><a href="UniqueContraintListener.html#beforeSave">beforeSave</a></li></ul></li></ul><h3>Modules</h3><ul><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data.html">most-data</a><ul class='methods'><li data-type='method'><a href="module-most-data.html#.createContext">createContext</a></li><li data-type='method'><a href="module-most-data.html#.execute">execute</a></li><li data-type='method'><a href="module-most-data.html#.executeAs">executeAs</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="module-most-data.cfg.html">cfg</a></li><li><a href="module-most-data.classes.html">classes</a></li><li><a href="module-most-data.common.html">common</a></li></ul><h3>Global</h3><ul><li><a href="global.html#DataCachingType">DataCachingType</a></li><li><a href="global.html#DataObjectState">DataObjectState</a></li><li><a href="global.html#PermissionMask">PermissionMask</a></li><li><a href="global.html#PrivilegeType">PrivilegeType</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">types.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * MOST Web Framework
+ * A JavaScript Web Framework
+ * http://themost.io
+ * Created by Kyriakos Barbounakis&lt;k.barbounakis@gmail.com> on 2014-01-25.
+ *
+ * Copyright (c) 2014, Kyriakos Barbounakis k.barbounakis@gmail.com
+ Anthi Oikonomou anthioikonomou@gmail.com
+ All rights reserved.
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ * Redistributions of source code must retain the above copyright notice, this
+ list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice,
+ this list of conditions and the following disclaimer in the documentation
+ and/or other materials provided with the distribution.
+ * Neither the name of MOST Web Framework nor the names of its
+ contributors may be used to endorse or promote products derived from
+ this software without specific prior written permission.
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/**
+ * @ignore
+  */
+var events = require('events'), util = require('util'), async = require('async'), qry = require('most-query');
+/**
+ * @classdesc Represents an abstract data connector to a database
+ * &lt;p>
+ There are several data adapters for connections to common database engines:
+ &lt;/p>
+ &lt;ul>
+    &lt;li>MOST Web Framework MySQL Adapter for connecting with MySQL Database Server
+    &lt;p>Install the data adapter:&lt;p>
+    &lt;pre class="prettyprint">&lt;code>npm install most-data-mysql&lt;/code>&lt;/pre>
+    &lt;p>Append the adapter type in application configuration (app.json#adapterTypes):&lt;p>
+    &lt;pre class="prettyprint">&lt;code>
+ ...
+ "adapterTypes": [
+ ...
+ { "name":"MySQL Data Adapter", "invariantName": "mysql", "type":"most-data-mysql" }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;p>Register an adapter in application configuration (app.json#adapters):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ adapters: [
+ ...
+ { "name":"development", "invariantName":"mysql", "default":true,
+     "options": {
+       "host":"localhost",
+       "port":3306,
+       "user":"user",
+       "password":"password",
+       "database":"test"
+     }
+ }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;/li>
+    &lt;li>MOST Web Framework MSSQL Adapter for connecting with Microsoft SQL Database Server
+ &lt;p>Install the data adapter:&lt;p>
+ &lt;pre class="prettyprint">&lt;code>npm install most-data-mssql&lt;/code>&lt;/pre>
+ &lt;p>Append the adapter type in application configuration (app.json#adapterTypes):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ ...
+ "adapterTypes": [
+ ...
+ { "name":"MSSQL Data Adapter", "invariantName": "mssql", "type":"most-data-mssql" }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;p>Register an adapter in application configuration (app.json#adapters):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ adapters: [
+ ...
+ { "name":"development", "invariantName":"mssql", "default":true,
+        "options": {
+          "server":"localhost",
+          "user":"user",
+          "password":"password",
+          "database":"test"
+        }
+    }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;/li>
+    &lt;li>MOST Web Framework PostgreSQL Adapter for connecting with PostgreSQL Database Server
+ &lt;p>Install the data adapter:&lt;p>
+ &lt;pre class="prettyprint">&lt;code>npm install most-data-pg&lt;/code>&lt;/pre>
+ &lt;p>Append the adapter type in application configuration (app.json#adapterTypes):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ ...
+ "adapterTypes": [
+ ...
+ { "name":"PostgreSQL Data Adapter", "invariantName": "postgres", "type":"most-data-pg" }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;p>Register an adapter in application configuration (app.json#adapters):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ adapters: [
+ ...
+ { "name":"development", "invariantName":"postgres", "default":true,
+        "options": {
+          "host":"localhost",
+          "post":5432,
+          "user":"user",
+          "password":"password",
+          "database":"db"
+        }
+    }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;/li>
+    &lt;li>MOST Web Framework Oracle Adapter for connecting with Oracle Database Server
+ &lt;p>Install the data adapter:&lt;p>
+ &lt;pre class="prettyprint">&lt;code>npm install most-data-oracle&lt;/code>&lt;/pre>
+ &lt;p>Append the adapter type in application configuration (app.json#adapterTypes):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ ...
+ "adapterTypes": [
+ ...
+ { "name":"Oracle Data Adapter", "invariantName": "oracle", "type":"most-data-oracle" }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;p>Register an adapter in application configuration (app.json#adapters):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ adapters: [
+ ...
+ { "name":"development", "invariantName":"oracle", "default":true,
+        "options": {
+          "host":"localhost",
+          "port":1521,
+          "user":"user",
+          "password":"password",
+          "service":"orcl",
+          "schema":"PUBLIC"
+        }
+    }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;/li>
+    &lt;li>MOST Web Framework SQLite Adapter for connecting with Sqlite Databases
+ &lt;p>Install the data adapter:&lt;p>
+ &lt;pre class="prettyprint">&lt;code>npm install most-data-sqlite&lt;/code>&lt;/pre>
+ &lt;p>Append the adapter type in application configuration (app.json#adapterTypes):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ ...
+ "adapterTypes": [
+ ...
+ { "name":"SQLite Data Adapter", "invariantName": "sqlite", "type":"most-data-sqlite" }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;p>Register an adapter in application configuration (app.json#adapters):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ adapters: [
+ ...
+ { "name":"development", "invariantName":"sqlite", "default":true,
+        "options": {
+            database:"db/local.db"
+        }
+    }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;/li>
+    &lt;li>MOST Web Framework Data Pool Adapter for connection pooling
+ &lt;p>Install the data adapter:&lt;p>
+ &lt;pre class="prettyprint">&lt;code>npm install most-data-pool&lt;/code>&lt;/pre>
+ &lt;p>Append the adapter type in application configuration (app.json#adapterTypes):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ ...
+ "adapterTypes": [
+ ...
+ { "name":"Pool Data Adapter", "invariantName": "pool", "type":"most-data-pool" }
+ { "name":"...", "invariantName": "...", "type":"..." }
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;p>Register an adapter in application configuration (app.json#adapters):&lt;p>
+ &lt;pre class="prettyprint">&lt;code>
+ adapters: [
+ { "name":"development", "invariantName":"...", "default":false,
+    "options": {
+      "server":"localhost",
+      "user":"user",
+      "password":"password",
+      "database":"test"
+    }
+},
+ { "name":"development_with_pool", "invariantName":"pool", "default":true,
+    "options": {
+      "adapter":"development"
+    }
+}
+ ...
+ ]
+ &lt;/code>&lt;/pre>
+ &lt;/li>
+ &lt;/ul>
+ * @class
+ * @constructor
+ * @param {*} options - The database connection options
+ * @bstract
+ * @property {*} rawConnection - Gets or sets the native database connection
+ * @property {*} options - Gets or sets the database connection options
+ */
+function DataAdapter(options) {
+
+    this.rawConnection=null;
+    this.options = options;
+}
+
+/**
+ * Opens the underlying database connection
+ * @param {Function} callback - A callback function where the first argument will contain the Error object if an error occured, or null otherwise.
+ */
+DataAdapter.prototype.open = function(callback) {
+    //
+};
+
+/**
+ * Closes the underlying database connection
+ * @param {Function} callback - A callback function where the first argument will contain the Error object if an error occured, or null otherwise.
+ */
+DataAdapter.prototype.close = function(callback) {
+    //
+};
+
+/**
+ * Executes the given query against the underlying database.
+ * @param {string|*} query - A string or a query expression to execute.
+ * @param {*} values - An object which represents the named parameters that are going to used during query parsing
+ * @param {Function} callback - A callback function where the first argument will contain the Error object if an error occured, or null otherwise. The second argument will contain the result.
+ */
+DataAdapter.prototype.execute = function(query, values, callback) {
+    //
+};
+/**
+ * Executes a batch query expression and returns the result.
+ * @param {DataModelBatch} batch - The batch query expression to execute
+ * @param {Function=} callback - A callback function where the first argument will contain the Error object if an error occured, or null otherwise. The second argument will contain the result.
+ * @deprecated This method is deprecated.
+ */
+DataAdapter.prototype.executeBatch = function(batch, callback) {
+    //
+};
+
+/**
+ * Produces a new identity value for the given entity and attribute.
+ * @param {string} entity - A string that represents the target entity name
+ * @param {string} attribute - A string that represents the target attribute name
+ * @param {Function=} callback - A callback function where the first argument will contain the Error object if an error occured, or null otherwise. The second argument will contain the result.
+ */
+DataAdapter.prototype.selectIdentity = function(entity, attribute , callback) {
+    //
+};
+
+/**
+ * Begins a transactional operation and executes the given function
+ * @param {Function} fn - The function to execute
+ * @param {Function=} callback - A callback function where the first argument will contain the Error object if an error occured, or null otherwise. The second argument will contain the result.
+ */
+DataAdapter.prototype.executeInTransaction = function(fn, callback) {
+    //
+};
+/**
+ * A helper method for creating a database view if the current data adapter supports views
+ * @param {string} name - A string that represents the name of the view to be created
+ * @param {QueryExpression|*} query - A query expression that represents the database view
+ * @param {Function=} callback - A callback function where the first argument will contain the Error object if an error occured, or null otherwise.
+ */
+DataAdapter.prototype.createView = function(name, query, callback) {
+    //
+};
+
+/**
+ * @classdesc EventEmitter2 class is an extension of node.js EventEmitter class where listeners are excuting in series.
+ * @class
+ * @augments EventEmitter
+ * @constructor
+ */
+function EventEmitter2() {
+    //
+}
+util.inherits(EventEmitter2, events.EventEmitter);
+/**
+ * Raises the specified event and executes event listeners in series.
+ * @param {String} event - The event that is going to be raised.
+ * @param {*} args - An object that contains the event arguments.
+ * @param {Function} callback - A callback function to be invoked after the execution.
+ */
+EventEmitter2.prototype.emit = function(event, args, callback)
+{
+    var self = this;
+    ////example: call super class function
+    //EventEmitter2.super_.emit.call(this);
+    //ensure callback
+    callback = callback || function() {};
+    //get listeners
+    var listeners = this.listeners(event);
+    //validate listeners
+    if (listeners.length==0) {
+        //exit emitter
+        callback.call(self, null);
+        return;
+    }
+    /*
+     An EventEmitter2 listener must be a function with args and a callback e.g.
+     function(e, cb) {
+     //do some code
+     ...
+     //finalize event
+     cb(null);
+     //or
+     cb(err)
+     }
+     */
+    //get event arguments
+    var e = args;
+    //apply each series
+    async.applyEachSeries(listeners, e, function(err) {
+        callback.call(self, err);
+    });
+};
+
+EventEmitter2.prototype.once = function(type, listener) {
+    var self = this;
+    if (typeof listener !== 'function')
+        throw TypeError('listener must be a function');
+    var fired = false;
+    function g() {
+        self.removeListener(type, g);
+        if (!fired) {
+            fired = true;
+            listener.apply(this, arguments);
+        }
+    }
+    g.listener = listener;
+    this.on(type, g);
+    return this;
+};
+
+/**
+ * @classdesc Represents the event arguments of a data model listener.
+ * @class
+ * @constructor
+ * @property {DataModel|*} model - Represents the underlying model.
+ * @property {DataObject|*} target - Represents the underlying data object.
+ * @property {Number|*} state - Represents the operation state (Update, Insert, Delete).
+ * @property {DataQueryable|*} emitter - Represents the event emitter, normally a DataQueryable object instance.
+ * @property {*} query - Represents the underlying query expression. This property may be null.
+ */
+function DataEventArgs() {
+    //
+}
+
+/**
+ * @classdesc Represents the main data context.
+ * @class
+ * @augments EventEmitter2
+ * @constructor
+ */
+function DataContext() {
+    /**
+     * Gets the current database adapter
+     * @type {DataAdapter}
+     */
+    this.db = undefined;
+    Object.defineProperty(this, 'db', {
+        get : function() {
+            return null;
+        },
+        configurable : false,
+        enumerable:false });
+}
+
+/**
+ * Gets a data model based on the given data context
+ * @param name {string} A string that represents the model to be loaded.
+ * @returns {DataModel}
+ */
+DataContext.prototype.model = function(name) {
+    return null;
+};
+/**
+ * @param cb {Function}
+ */
+DataContext.prototype.finalize = function(cb) {
+    //
+};
+//set EventEmitter2 inheritance
+util.inherits(DataContext, EventEmitter2);
+
+/**
+ * @classdesc Represents a data model's listener
+ * @class
+ * @constructor
+ * @abstract
+ */
+function DataEventListener() {
+    //
+}
+/**
+ * Occurs before executing a data operation. The event arguments contain the query that is going to be executed.
+ * @param {DataEventArgs} e - An object that represents the event arguments passed to this operation.
+ * @param {Function} cb - A callback function that should be called at the end of this operation. The first argument may be an error if any occured.
+ */
+DataEventListener.prototype.beforeExecute = function(e, cb) {
+    return this;
+};
+/**
+ * Occurs after executing a data operation. The event arguments contain the executed query.
+ * @param {DataEventArgs} e - An object that represents the event arguments passed to this operation.
+ * @param {Function} cb - A callback function that should be called at the end of this operation. The first argument may be an error if any occured.
+ */
+DataEventListener.prototype.afterExecute = function(e, cb) {
+    return this;
+};
+/**
+ * Occurs before creating or updating a data object.
+ * @param {DataEventArgs} e - An object that represents the event arguments passed to this operation.
+ * @param {Function} cb - A callback function that should be called at the end of this operation. The first argument may be an error if any occured.
+ */
+DataEventListener.prototype.beforeSave = function(e, cb) {
+    return this;
+};
+/**
+ * Occurs after creating or updating a data object.
+ * @param {DataEventArgs} e - An object that represents the event arguments passed to this operation.
+ * @param {Function} cb - A callback function that should be called at the end of this operation. The first argument may be an error if any occured.
+ */
+DataEventListener.prototype.afterSave = function(e, cb) {
+    return this;
+};
+/**
+ * Occurs before removing a data object.
+ * @param {DataEventArgs} e - An object that represents the event arguments passed to this operation.
+ * @param {Function} cb - A callback function that should be called at the end of this operation. The first argument may be an error if any occured.
+ * @returns {DataEventListener}
+ */
+DataEventListener.prototype.beforeRemove = function(e, cb) {
+    return this;
+};
+/**
+ * Occurs after removing a data object.
+ * @param {DataEventArgs} e - An object that represents the event arguments passed to this operation.
+ * @param {Function} cb - A callback function that should be called at the end of this operation. The first argument may be an error if any occured.
+ */
+DataEventListener.prototype.afterRemove = function(e, cb) {
+    return this;
+};
+
+var DateTimeRegex = /^(\d{4})(?:-?W(\d+)(?:-?(\d+)D?)?|(?:-(\d+))?-(\d+))(?:[T ](\d+):(\d+)(?::(\d+)(?:\.(\d+))?)?)?(?:Z(-?\d*))?$/g;
+var BooleanTrueRegex = /^true$/ig;
+var BooleanFalseRegex = /^false$/ig;
+var NullRegex = /^null$/ig;
+var UndefinedRegex = /^undefined$/ig;
+var IntegerRegex =/^[-+]?\d+$/g;
+var FloatRegex =/^[+-]?\d+(\.\d+)?$/g;
+
+/*
+ * EXCEPTIONS
+ */
+
+/**
+ * @classdesc Extends Error object for throwing exceptions on data operations
+ * @class
+ * @param {string=} code - A string that represents an error code
+ * @param {string=} message - The error message
+ * @param {string=} innerMessage - The error inner message
+ * @param {string=} model - The target model
+ * @param {string=} field - The target field
+ * @constructor
+ * @property {string} code - A string that represents an error code e.g. EDATA
+ * @property {string} message -  The error message.
+ * @property {string} innerMessage - The error inner message.
+ * @property {number} status - A number that represents an error status. This error status may be used for throwing the approriate HTTP error.
+ * @augments Error
+ */
+function DataException(code, message, innerMessage, model, field) {
+    this.code  = code || 'EDATA';
+    if (model)
+        this.model = model;
+    if (field)
+        this.field = field;
+    this.message = message || 'A general data error occured.';
+    if (innerMessage)
+        this.innerMessage = innerMessage;
+}
+util.inherits(DataException, Error);
+
+/**
+ * @classdesc Extends Error object for throwing not null exceptions.
+ * @class
+ * @param {string=} message - The error message
+ * @param {string=} innerMessage - The error inner message
+ * @constructor
+ * @property {string} code - A string that represents an error code. The default error code is ENULL.
+ * @property {string} message -  The error message.
+ * @property {string} innerMessage - The error inner message.
+ * @property {number} status - A number that represents an error status. This error status may be used for throwing the approriate HTTP error. The default status is 409 (Conflict)
+ * @property {string} model - The target model name
+ * @property {string} field - The target field name
+ * @augments Error
+ */
+function NotNullException(message, innerMessage, model, field) {
+    NotNullException.super_.call(this, 'ENULL', message || 'A value is required', innerMessage, model, field);
+    this.status = 409;
+}
+util.inherits(NotNullException, DataException);
+
+/**
+ * @classdesc Extends Error object for throwing not found exceptions.
+ * @class
+ * @param {string=} message - The error message
+ * @param {string=} innerMessage - The error inner message
+ * @constructor
+ * @property {string} code - A string that represents an error code. The default error code is EFOUND.
+ * @property {string} message -  The error message.
+ * @property {string} innerMessage - The error inner message.
+ * @property {number} status - A number that represents an error status. This error status may be used for throwing the approriate HTTP error. The default status is 404 (Conflict)
+ * @property {string} model - The target model name
+ * @augments Error
+ */
+function DataNotFoundException(message, innerMessage, model) {
+    DataNotFoundException.super_.call(this, 'EFOUND', message || 'The requested data was not found.', innerMessage, model);
+    this.status = 404;
+}
+util.inherits(DataNotFoundException, DataException);
+
+/**
+ * @classdesc Extends Error object for throwing not null exceptions.
+ * @class
+ * @param {string=} message - The error message
+ * @param {string=} innerMessage - The error inner message
+ * @constructor
+ * @property {string} code - A string that represents an error code. The default error code is ENULL.
+ * @property {string} message -  The error message.
+ * @property {string} innerMessage - The error inner message.
+ * @property {number} status - A number that represents an error status. This error status may be used for throwing the approriate HTTP error. The default status is 409 (Conflict)
+ * @property {string} model - The target model name
+ * @property {string} constraint - The target constraint name
+ * @augments Error
+ */
+function UniqueConstraintException(message, innerMessage, model, constraint) {
+    UniqueConstraintException.super_.call(this, 'EUNQ', message || 'A unique constraint violated', innerMessage, model);
+    if (constraint)
+        this.constraint = constraint;
+    this.status = 409;
+}
+util.inherits(UniqueConstraintException, DataException);
+
+/**
+ * @classdesc Represents an access denied data exception.
+ * @class
+ *
+ * @param {string=} message - The error message
+ * @param {string=} innerMessage - The error inner message
+ * @property {string} code - A string that represents an error code. The error code is EACCESS.
+ * @property {number} status - A number that represents an error status. The error status is 401.
+ * @property {string} message -  The error message.
+ * @property {string} innerMessage - The error inner message.
+ * @augments DataException
+ * @constructor
+ */
+function AccessDeniedException(message, innerMessage) {
+    AccessDeniedException.super_.call(this, 'EACCESS', ('Access Denied' || message) , innerMessage);
+    this.status = 401;
+}
+util.inherits(AccessDeniedException, DataException);
+
+/**
+ * @class
+ * @param name
+ * @constructor
+ */
+function DataQueryableField(name) {
+    if (typeof name !== 'string') {
+        throw new Error('Invalid argument type. Expected string.')
+    }
+    this.name = name;
+}
+
+/**
+ * @returns {DataQueryableField}
+ */
+DataQueryableField.prototype.as = function(s) {
+    if (typeof s === 'undefined' || s==null) {
+        delete this.$as;
+        return this;
+    }
+    /**
+     * @private
+     * @type {string}
+     */
+    this.$as = s;
+    return this;
+};
+
+/**
+ * Returns the alias expression, if any.
+ * @returns {string}
+ * @private
+ */
+DataQueryableField.prototype._as = function() {
+    return (typeof this.$as !== 'undefined' &amp;&amp; this.$as != null) ? ' as ' + this.$as : '';
+};
+
+DataQueryableField.prototype.toString = function() {
+    return this.name + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.max = function() {
+    return util.format('max(%s)', this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.min = function() {
+    return util.format('min(%s)', this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.count = function() {
+    return util.format('count(%s)', this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.average = function() {
+    return util.format('avg(%s)', this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.length = function() {
+    return util.format('length(%s)', this.name) + this._as();
+};
+
+///**
+// * @param {String} s
+// * @returns {string}
+// */
+//DataQueryableField.prototype.indexOf = function(s) {
+//    return util.format('indexof(%s,%s)', this.name, qry.escape(s)) + this._as();
+//};
+
+/**
+ * @param {number} pos
+ * @param {number} length
+ * @returns {string}
+ */
+DataQueryableField.prototype.substr = function(pos, length) {
+    return util.format('substring(%s,%s,%s)',this.name, pos, length) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.floor = function() {
+    return util.format('floor(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.round = function() {
+    return util.format('round(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.getYear = function() {
+    return util.format('year(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.getDay = function() {
+    return util.format('day(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.getMonth = function() {
+    return util.format('month(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.getMinutes = function() {
+    return util.format('minute(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.getHours = function() {
+    return util.format('hour(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.getSeconds = function() {
+    return util.format('second(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.getDate = function() {
+    return util.format('date(%s)',this.name) + this._as();
+};
+
+///**
+// * @returns {string}
+// */
+//DataQueryableField.prototype.ceil = function() {
+//    return util('ceil(%s)',this.name);
+//};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.toLocaleLowerCase = function() {
+    return util.format('tolower(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.toLowerCase = function() {
+    return util.format('tolower(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.toLocaleUpperCase = function() {
+    return util.format('toupper(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.toUpperCase = function() {
+    return util.format('toupper(%s)',this.name) + this._as();
+};
+
+/**
+ * @returns {string}
+ */
+DataQueryableField.prototype.trim = function() {
+    return util.format('trim(%s)',this.name) + this._as();
+};
+
+/** native extensions **/
+if (typeof String.prototype.fieldOf === 'undefined')
+{
+    /**
+     * @returns {DataQueryableField}
+     * @private
+     */
+    var fnFieldOf = function() {
+        if (this == null) {
+            throw new TypeError('String.prototype.fieldOf called on null or undefined');
+        }
+        return new DataQueryableField(this.toString());
+    };
+    if (!String.prototype.fieldOf) { String.prototype.fieldOf = fnFieldOf; }
+}
+
+
+/**
+ * Represents a model migration scheme against data adapters
+ * @class
+ * @constructor
+ */
+function DataModelMigration() {
+    /**
+     * Gets an array that contains the definition of fields that are going to be added
+     * @type {Array}
+     */
+    this.add = [];
+    /**
+     * Gets an array that contains the definition of fields that are going to be deleted
+     * @type {Array}
+     */
+    this.remove = [];
+    /**
+     * Gets an array that contains the definition of fields that are going to be changed
+     * @type {Array}
+     */
+    this.change = [];
+    /**
+     * Gets or sets a string that contains the internal version of this migration. This property cannot be null.
+     * @type {string}
+     */
+    this.version = '0.0';
+    /**
+     * Gets or sets a string that represents a short description of this migration
+     * @type {string}
+     */
+    this.description = null;
+    /**
+     * Gets or sets a string that represents the adapter that is going to be migrated through this operation.
+     * This property cannot be null.
+     */
+    this.appliesTo = null;
+    /**
+     * Gets or sets a string that represents the model that is going to be migrated through this operation.
+     * This property may be null.
+     */
+    this.model = null;
+}
+/**
+ * @class
+ * @constructor
+ */
+function DataModelBatch() {
+    /**
+     * Gets or sets a string that represents the data table that is going to be used in this operation.
+     * This property cannot be null.
+     */
+    this.appliesTo = null;
+    /**
+     * Gets an array that contains the items to be added
+     */
+    this.add = [];
+    /**
+     * Gets an array that contains the items to be updated
+     */
+    this.change = [];
+    /**
+     * Gets an array that contains the items to be updated
+     */
+    this.remove = [];
+    /**
+     * Gets or sets the target model
+     * @type {DataModel}
+     */
+    this.model = null;
+}
+/**
+ * @param {*} obj
+ */
+DataModelBatch.prototype.prepare = function(obj) {
+    var self = this;
+    if (self.model==null)
+        throw new Error('The model of a batch operation cannot be empty at this context.');
+    var key = self.model.key();
+    if (!obj)
+        return;
+    var items = util.isArray(obj) ? obj : [obj];
+    array(items).each(function(x) {
+        if (x[key.name]!=null) {
+            //state is modified
+            self.change = self.change || [];
+            self.change.push(x);
+        }
+        else {
+            //state is added
+            self.add = self.add || [];
+            self.add.push(x);
+        }
+    });
+};
+
+/**
+ * @classdesc DataAssociationMapping class describes the association between two models.
+ * &lt;p>
+ *     An association between two models is described in field attributes. For example
+ *     model Order may have an association with model Party (Person or Organization) through the field Order.customer:
+ * &lt;/p>
+ &lt;pre class="prettyprint">&lt;code>
+   { "name": "Order",
+     "fields": [
+    ...
+   {
+        "name": "customer",
+        "title": "Customer",
+        "description": "Party placing the order.",
+        "type": "Party"
+    }
+    ...]
+    }
+ &lt;/code>&lt;/pre>
+ &lt;p>
+      This association is equivalent with the following DataAssociationMapping instance:
+ &lt;/p>
+ &lt;pre class="prettyprint">&lt;code>
+ "mapping": {
+    "cascade": "null",
+    "associationType": "association",
+    "select": [],
+    "childField": "customer",
+    "childModel": "Order",
+    "parentField": "id",
+    "parentModel": "Party"
+}
+ &lt;/code>&lt;/pre>
+  &lt;p>
+ The above association mapping was auto-generated from the field definition of Order.customer where the field type (Party)
+ actually defines the association between these models.
+ &lt;/p>
+ &lt;p>
+ Another example of an association between two models is a many-to-many association. User model has a many-to-many association (for user groups) with Group model:
+ &lt;/p>
+ &lt;pre class="prettyprint">&lt;code>
+ { "name": "User",
+   "fields": [
+  ...
+ {
+    "name": "groups",
+    "title": "User Groups",
+    "description": "A collection of groups where user belongs.",
+    "type": "Group",
+    "expandable": true,
+    "mapping": {
+        "associationAdapter": "GroupMembers",
+        "parentModel": "Group",
+        "parentField": "id",
+        "childModel": "User",
+        "childField": "id",
+        "associationType": "junction",
+        "cascade": "delete"
+    }
+}
+  ...]
+  }
+ &lt;/code>&lt;/pre>
+ &lt;p>This association may also be defined in Group model:&lt;/p>
+ &lt;pre class="prettyprint">&lt;code>
+ { "name": "Group",
+   "fields": [
+  ...
+ {
+    "name": "members",
+    "title": "Group Members",
+    "description": "Contains the collection of group members (users or groups).",
+    "type": "Account",
+    "many":true
+}
+  ...]
+  }
+ &lt;/code>&lt;/pre>
+ *
+ * @class
+ * @property {string} associationAdapter - Gets or sets the association database object
+ * @property {string} parentModel - Gets or sets the parent model name
+ * @property {string} childModel - Gets or sets the child model name
+ * @property {string} parentField - Gets or sets the parent field name
+ * @property {string} childField - Gets or sets the child field name
+ * @property {string} refersTo - Gets or sets the parent property where this association refers to
+ * @property {string} parentLabel - Gets or sets the parent field that is going to be used as label for this association
+ * @property {string} cascade - Gets or sets the action that occurs when parent item is going to be deleted (all|none|null|delete). The default value is 'none'.
+ * @property {string} associationType - Gets or sets the type of this association (junction|association). The default value is 'association'.
+ * @property {string[]} select - Gets or sets an array of fields to select from associated model. If this property is empty then all associated model fields will be selected.
+ * @property {boolean} oneToOne - Gets or sets a boolean value that indicates whether current relation is one-to-one relation. The default value is false.
+ * @param {*=} obj - An object that contains relation mapping attributes
+ * @constructor
+ */
+function DataAssociationMapping(obj) {
+    this.cascade = 'none';
+    this.associationType = 'association';
+    this.select = [];
+    this.oneToOne = false;
+    if (typeof obj === 'object') { util._extend(this, obj); }
+}
+
+
+/**
+ * @class
+ * @constructor
+ * @property {string} name - Gets or sets the internal name of this field.
+ * @property {string} property - Gets or sets the property name for this field.
+ * @property {string} title - Gets or sets the title of this field.
+ * @property {boolean} nullable - Gets or sets a boolean that indicates whether field is nullable or not.
+ * @property {string} type - Gets or sets the type of this field.
+ * @property {boolean} primary - Gets or sets a boolean that indicates whether field is primary key or not.
+ * @property {boolean} many - Gets or sets a boolean that indicates whether field defines an one-to-many relationship between models.
+ * @property {boolean} model - Gets or sets the parent model of this field.
+ * @property {*} value - Gets or sets the default value of this field.
+ * @property {*} calculation - Gets or sets the calculated value of this field.
+ * @property {boolean} readonly - Gets or sets a boolean that indicates whether a field is readonly.
+ * @property {DataAssociationMapping} mapping - Get or sets a relation mapping for this field.
+ * @property {string} coltype - Gets or sets a string that indicates the data field's column type. This attribute is used in data view definition
+ * @property {boolean} expandable - Get or sets whether the current field defines an association mapping and the associated data object(s) must be included while getting data.
+ * @property {string} section - Gets or sets the section where the field belongs.
+ * @property {string} description - Gets or sets a short description for this field.
+ * @property {string} help - Gets or sets a short help for this field.
+ * @property {string} appearance - Gets or sets the appearance template of this field, if any.
+ * @property {*} options - Gets or sets the available options for this field.
+ * @property {boolean} virtual - Gets or sets a boolean that indicates whether this fields is a view only field or not.
+ */
+function DataField() {
+    this.nullable = true;
+    this.primary = false;
+    this.readonly = false;
+    this.expandable = false;
+    this.virtual = false;
+}
+
+/**
+ * @class
+ * @constructor
+ * @property {string} name - Gets or sets a short description for this listener
+ * @property {string} type - Gets or sets a string which is the path of the module that exports this listener.
+ * @property {boolean} disabled - Gets or sets a boolean value that indicates whether this listener is disabled or not. The default value is false.
+ *
+ * @description
+ * &lt;p>
+ * A data model uses event listeners as triggers which are automatically executed after data operations.
+ * Those listeners are defined in [eventListeners] section of a model's schema.
+ * &lt;/p>
+ * &lt;pre class="prettyprint">
+ *&lt;code>
+*     {
+*          ...
+*          "fields": [ ... ],
+*          ...
+*          "eventListeners": [
+*              { "name":"Update Listener", "type":"/app/controllers/an-update-listener.js" },
+*              { "name":"Another Update Listener", "type":"module-a/lib/listener" }
+*          ]
+*          ...
+*     }
+ *&lt;/code>
+ * &lt;/pre>
+ * @example
+ * // A simple DataEventListener that sends a message to sales users after new order was arrived.
+ * var web = require("most-web");
+ exports.afterSave = function(event, callback) {
+    //exit if state is other than [Insert]
+    if (event.state != 1) { return callback() }
+    //initialize web mailer
+    var mm = require("most-web-mailer"), context = event.model.context;
+    //send new order mail template by passing new item data
+    mm.mailer(context).to("sales@example.com")
+        .cc("supervisor@example.com")
+        .subject("New Order")
+        .template("new-order").send(event.target, function(err) {
+        if (err) { return web.common.log(err); }
+        return callback();
+    });
+};
+ *
+ */
+function DataModelEventListener() {
+
+}
+/**
+ * An enumeration of tha available privilege types
+ * @enum
+ */
+var PrivilegeType = {
+    /**
+     * Self Privilege (self).
+     * @type {string}
+     */
+    Self: "self",
+    /**
+     * Parent Privilege (parent)
+     * @type {string}
+     */
+    Parent: "parent",
+    /**
+     * Item Privilege (child)
+     * @type {string}
+     */
+    Item: "item",
+    /**
+     * Global Privilege (global)
+     * @type {string}
+     */
+    Global: "global"
+};
+
+/**
+ * @classdesc Represents a privilege which is defined in a data model and it may be given in users and groups
+ * @class
+ * @constructor
+ * @property {PermissionMask} mask - Gets or sets the set of permissions which may be given with this privilege.
+ * @property {PrivilegeType|string} type - Gets or sets the type of this privilege (global|parent|item|self).
+ * @property {string} filter - Gets or sets a filter expression which is going to be used for self privileges.
+ * The defined set of permissions are automatically assigned if the requested objects fulfill filter criteria.
+ * (e.g. read-write permissions for a user's associated person through the following expression:"user eq me()")
+ * @property {string} account - Gets or sets a wildcard (*) expression for global privileges only.
+ * The defined set of permissions are automatically assigned to all users (e.g. read permissions for all users)
+ */
+function DataModelPrivilege() {
+
+}
+
+
+
+/**
+ * Represents a query result when this query uses paging parameters.
+ * @class
+ * @property {number} total - The total number of records
+ * @property {number} skip - The number of skipped records
+ * @property {Array} records - An array of objects which represents the query results.
+ * @constructor
+ */
+function DataResultSet() {
+    this.total = 0;
+    this.skip = 0;
+    this.records = [];
+}
+
+/**
+ * @abstract
+ * @constructor
+ * @ignore
+ */
+function DataContextEmitter() {
+    //
+}
+DataContextEmitter.prototype.ensureContext = function() {
+    return null;
+};
+
+/**
+ * An enumeration of the available data object states
+ * @enum {number}
+ */
+var DataObjectState = {
+    /**
+     * Insert State (1)
+     */
+    Insert:1,
+    /**
+     * Update State (2)
+     */
+    Update:2,
+    /**
+     * Delete State (4)
+     */
+    Delete:4
+};
+
+/**
+ * An enumeration of the available data caching types
+ * @enum {string}
+ */
+var DataCachingType = {
+    /**
+     * Data will never be cached (none)
+     */
+    None: 'none',
+    /**
+     * Data will always be cached (always)
+     */
+    Always: 'always',
+    /**
+     * Data will conditionally be cached (conditional)
+     */
+    Conditional: 'conditional'
+};
+
+var types =
+{
+    PrivilegeType:PrivilegeType,
+    DataObjectState:DataObjectState,
+    DataCachingType:DataCachingType,
+    DataQueryableField: DataQueryableField,
+    DataAdapter: DataAdapter,
+    DataContext: DataContext,
+    DataContextEmitter: DataContextEmitter,
+    EventEmitter2: EventEmitter2,
+    DataEventArgs: DataEventArgs,
+    DataEventListener: DataEventListener,
+    DataModelMigration: DataModelMigration,
+    DataAssociationMapping:DataAssociationMapping,
+    DataModelBatch: DataModelBatch,
+    parsers: {
+        parseInteger: function(val) {
+            if (typeof val === 'undefined' || val == null)
+                return 0;
+            else if (typeof val === 'number')
+                return val;
+            else if (typeof val === 'string') {
+                if (val.match(IntegerRegex) || val.match(FloatRegex)) {
+                    return parseInt(val, 10);
+                }
+                else if (val.match(BooleanTrueRegex))
+                    return 1;
+                else if (val.match(BooleanFalseRegex))
+                    return 0;
+            }
+            else if (typeof val === 'boolean')
+                return val===true ? 1 : 0;
+            else {
+                return parseInt(val) || 0;
+            }
+        },
+        parseCounter: function(val) {
+            return types.parsers.parseInteger(val);
+        },
+        parseFloat: function(val) {
+            if (typeof val === 'undefined' || val == null)
+                return 0;
+            else if (typeof val === 'number')
+                return val;
+            else if (typeof val === 'string') {
+                if (val.match(IntegerRegex) || val.match(FloatRegex)) {
+                    return parseFloat(val);
+                }
+                else if (val.match(BooleanTrueRegex))
+                    return 1;
+            }
+            else if (typeof val === 'boolean')
+                return val===true ? 1 : 0;
+            else {
+                return parseFloat(val);
+            }
+        },
+        parseNumber: function(val) {
+            return types.parsers.parseFloat(val);
+        },
+        parseDateTime: function(val) {
+            if (typeof val === 'undefined' || val == null)
+                return null;
+            if (val instanceof Date)
+                return val;
+            if (typeof val === 'string') {
+                if (val.match(DateTimeRegex))
+                    return new Date(Date.parse(val));
+            }
+            else if (typeof val === 'number') {
+                return new Date(val);
+            }
+            return null;
+        },
+        parseDate: function(val) {
+            var res = types.parsers.parseDateTime(val);
+            if (res instanceof Date) {
+                res.setHours(0,0,0,0);
+                return res;
+            }
+            return res;
+        },
+        parseBoolean: function(val) {
+            return (types.parsers.parseInteger(val)!==0);
+        },
+        parseText: function(val) {
+            if (typeof val === 'undefined' || val == null)
+                return val;
+            else if (typeof val === 'string') {
+                return val;
+            }
+            else {
+                return val.toString();
+            }
+        }
+    },
+    DataException:DataException,
+    NotNullException:NotNullException,
+    UniqueConstraintException:UniqueConstraintException,
+    AccessDeniedException:AccessDeniedException,
+    DataNotFoundException:DataNotFoundException,
+    DataField:DataField,
+    DataResultSet:DataResultSet,
+    DataModelEventListener:DataModelEventListener,
+    DataModelPrivilege:DataModelPrivilege
+};
+
+if (typeof exports !== 'undefined')
+{
+    module.exports = types;
+}
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/layout.js"></script>
+
+</body>
+</html>
