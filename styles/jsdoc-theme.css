@@ -119,3 +119,20 @@ h4.name {
 .prettyprint.linenums li {
     border-left: 1px #ddd solid;
 }
+
+table.table-flat {
+	border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.table-flat th {
+	font-weight: 400;
+	color: #0288D1;
+	padding: 6px 9px;
+	text-align: left;
+	border-bottom: solid 2px #0288D1;
+}
+
+table.table-flat td {
+	padding: 6px 9px;
+}

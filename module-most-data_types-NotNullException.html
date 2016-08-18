@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NotNullException - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-theme.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><i class='ionicons ion-ios-minus'></i><a href="CalculatedValueListener.html">CalculatedValueListener</a><ul class='methods'><li data-type='method'><a href="CalculatedValueListener.html#beforeSave">beforeSave</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataCache.html">DataCache</a><ul class='methods'><li data-type='method'><a href="DataCache.html#add">add</a></li><li data-type='method'><a href="DataCache.html#ensure">ensure</a></li><li data-type='method'><a href="DataCache.html#get">get</a></li><li data-type='method'><a href="DataCache.html#init">init</a></li><li data-type='method'><a href="DataCache.html#remove">remove</a></li><li data-type='method'><a href="DataCache.html#removeAll">removeAll</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataCachingListener.html">DataCachingListener</a><ul class='methods'><li data-type='method'><a href="DataCachingListener.html#afterExecute">afterExecute</a></li><li data-type='method'><a href="DataCachingListener.html#beforeExecute">beforeExecute</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataConfiguration.html">DataConfiguration</a><ul class='methods'><li data-type='method'><a href="DataConfiguration.html#getModelDefinition">getModelDefinition</a></li><li data-type='method'><a href="DataConfiguration.html#getModelPath">getModelPath</a></li><li data-type='method'><a href="DataConfiguration.html#model">model</a></li><li data-type='method'><a href="DataConfiguration.html#setModelDefinition">setModelDefinition</a></li><li data-type='method'><a href="DataConfiguration.html#setModelPath">setModelPath</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataModel.html">DataModel</a><ul class='methods'><li data-type='method'><a href="DataModel.html#all">all</a></li><li data-type='method'><a href="DataModel.html#asQueryable">asQueryable</a></li><li data-type='method'><a href="DataModel.html#base">base</a></li><li data-type='method'><a href="DataModel.html#cast">cast</a></li><li data-type='method'><a href="DataModel.html#clone">clone</a></li><li data-type='method'><a href="DataModel.html#convert">convert</a></li><li data-type='method'><a href="DataModel.html#dataviews">dataviews</a></li><li data-type='method'><a href="DataModel.html#field">field</a></li><li data-type='method'><a href="DataModel.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="DataModel.html#filter">filter</a></li><li data-type='method'><a href="DataModel.html#find">find</a></li><li data-type='method'><a href="DataModel.html#first">first</a></li><li data-type='method'><a href="DataModel.html#get">get</a></li><li data-type='method'><a href="DataModel.html#getDataView">getDataView</a></li><li data-type='method'><a href="DataModel.html#getSubTypes">getSubTypes</a></li><li data-type='method'><a href="DataModel.html#getSuperTypes">getSuperTypes</a></li><li data-type='method'><a href="DataModel.html#idOf">idOf</a></li><li data-type='method'><a href="DataModel.html#inferMapping">inferMapping</a></li><li data-type='method'><a href="DataModel.html#inferState">inferState</a></li><li data-type='method'><a href="DataModel.html#initialize">initialize</a></li><li data-type='method'><a href="DataModel.html#insert">insert</a></li><li data-type='method'><a href="DataModel.html#key">key</a></li><li data-type='method'><a href="DataModel.html#last">last</a></li><li data-type='method'><a href="DataModel.html#levels">levels</a></li><li data-type='method'><a href="DataModel.html#list">list</a></li><li data-type='method'><a href="DataModel.html#max">max</a></li><li data-type='method'><a href="DataModel.html#migrate">migrate</a></li><li data-type='method'><a href="DataModel.html#min">min</a></li><li data-type='method'><a href="DataModel.html#new">new</a></li><li data-type='method'><a href="DataModel.html#orderBy">orderBy</a></li><li data-type='method'><a href="DataModel.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="DataModel.html#recast">recast</a></li><li data-type='method'><a href="DataModel.html#remove">remove</a></li><li data-type='method'><a href="DataModel.html#save">save</a></li><li data-type='method'><a href="DataModel.html#search">search</a></li><li data-type='method'><a href="DataModel.html#select">select</a></li><li data-type='method'><a href="DataModel.html#silent">silent</a></li><li data-type='method'><a href="DataModel.html#skip">skip</a></li><li data-type='method'><a href="DataModel.html#take">take</a></li><li data-type='method'><a href="DataModel.html#update">update</a></li><li data-type='method'><a href="DataModel.html#validateForInsert">validateForInsert</a></li><li data-type='method'><a href="DataModel.html#validateForUpdate">validateForUpdate</a></li><li data-type='method'><a href="DataModel.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataModelCreateViewListener.html">DataModelCreateViewListener</a><ul class='methods'><li data-type='method'><a href="DataModelCreateViewListener.html#afterUpgrade">afterUpgrade</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataModelSeedListener.html">DataModelSeedListener</a><ul class='methods'><li data-type='method'><a href="DataModelSeedListener.html#afterUpgrade">afterUpgrade</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataModelView.html">DataModelView</a><ul class='methods'><li data-type='method'><a href="DataModelView.html#cast">cast</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataNestedObjectListener.html">DataNestedObjectListener</a><ul class='methods'><li data-type='method'><a href="DataNestedObjectListener.html#beforeSave">beforeSave</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataObject.html">DataObject</a><ul class='methods'><li data-type='method'><a href="DataObject.html#attr">attr</a></li><li data-type='method'><a href="DataObject.html#attrOf">attrOf</a></li><li data-type='method'><a href="DataObject.html#getId">getId</a></li><li data-type='method'><a href="DataObject.html#getModel">getModel</a></li><li data-type='method'><a href="DataObject.html#idOf">idOf</a></li><li data-type='method'><a href="DataObject.html#is">is</a></li><li data-type='method'><a href="DataObject.html#property">property</a></li><li data-type='method'><a href="DataObject.html#query">query</a></li><li data-type='method'><a href="DataObject.html#remove">remove</a></li><li data-type='method'><a href="DataObject.html#save">save</a></li><li data-type='method'><a href="DataObject.html#selector">selector</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataObjectAssociationListener.html">DataObjectAssociationListener</a><ul class='methods'><li data-type='method'><a href="DataObjectAssociationListener.html#afterSave">afterSave</a></li><li data-type='method'><a href="DataObjectAssociationListener.html#beforeSave">beforeSave</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataObjectJunction.html">DataObjectJunction</a><ul class='methods'><li data-type='method'><a href="DataObjectJunction.html#add">add</a></li><li data-type='method'><a href="DataObjectJunction.html#all">all</a></li><li data-type='method'><a href="DataObjectJunction.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="DataObjectJunction.html#and">and</a></li><li data-type='method'><a href="DataObjectJunction.html#asArray">asArray</a></li><li data-type='method'><a href="DataObjectJunction.html#average">average</a></li><li data-type='method'><a href="DataObjectJunction.html#between">between</a></li><li data-type='method'><a href="DataObjectJunction.html#bit">bit</a></li><li data-type='method'><a href="DataObjectJunction.html#cache">cache</a></li><li data-type='method'><a href="DataObjectJunction.html#ceil">ceil</a></li><li data-type='method'><a href="DataObjectJunction.html#clear">clear</a></li><li data-type='method'><a href="DataObjectJunction.html#clone">clone</a></li><li data-type='method'><a href="DataObjectJunction.html#concat">concat</a></li><li data-type='method'><a href="DataObjectJunction.html#contains">contains</a></li><li data-type='method'><a href="DataObjectJunction.html#count">count</a></li><li data-type='method'><a href="DataObjectJunction.html#countOf">countOf</a></li><li data-type='method'><a href="DataObjectJunction.html#data">data</a></li><li data-type='method'><a href="DataObjectJunction.html#divide">divide</a></li><li data-type='method'><a href="DataObjectJunction.html#endsWith">endsWith</a></li><li data-type='method'><a href="DataObjectJunction.html#equal">equal</a></li><li data-type='method'><a href="DataObjectJunction.html#expand">expand</a></li><li data-type='method'><a href="DataObjectJunction.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="DataObjectJunction.html#first">first</a></li><li data-type='method'><a href="DataObjectJunction.html#flatten">flatten</a></li><li data-type='method'><a href="DataObjectJunction.html#floor">floor</a></li><li data-type='method'><a href="DataObjectJunction.html#getDate">getDate</a></li><li data-type='method'><a href="DataObjectJunction.html#getDay">getDay</a></li><li data-type='method'><a href="DataObjectJunction.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="DataObjectJunction.html#getHours">getHours</a></li><li data-type='method'><a href="DataObjectJunction.html#getItems">getItems</a></li><li data-type='method'><a href="DataObjectJunction.html#getLevels">getLevels</a></li><li data-type='method'><a href="DataObjectJunction.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="DataObjectJunction.html#getMonth">getMonth</a></li><li data-type='method'><a href="DataObjectJunction.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="DataObjectJunction.html#getYear">getYear</a></li><li data-type='method'><a href="DataObjectJunction.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="DataObjectJunction.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="DataObjectJunction.html#groupBy">groupBy</a></li><li data-type='method'><a href="DataObjectJunction.html#in">in</a></li><li data-type='method'><a href="DataObjectJunction.html#indexOf">indexOf</a></li><li data-type='method'><a href="DataObjectJunction.html#insert">insert</a></li><li data-type='method'><a href="DataObjectJunction.html#is">is</a></li><li data-type='method'><a href="DataObjectJunction.html#length">length</a></li><li data-type='method'><a href="DataObjectJunction.html#levels">levels</a></li><li data-type='method'><a href="DataObjectJunction.html#list">list</a></li><li data-type='method'><a href="DataObjectJunction.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="DataObjectJunction.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="DataObjectJunction.html#max">max</a></li><li data-type='method'><a href="DataObjectJunction.html#migrate">migrate</a></li><li data-type='method'><a href="DataObjectJunction.html#migrate">migrate</a></li><li data-type='method'><a href="DataObjectJunction.html#min">min</a></li><li data-type='method'><a href="DataObjectJunction.html#mod">mod</a></li><li data-type='method'><a href="DataObjectJunction.html#multiply">multiply</a></li><li data-type='method'><a href="DataObjectJunction.html#notContains">notContains</a></li><li data-type='method'><a href="DataObjectJunction.html#notEqual">notEqual</a></li><li data-type='method'><a href="DataObjectJunction.html#notIn">notIn</a></li><li data-type='method'><a href="DataObjectJunction.html#or">or</a></li><li data-type='method'><a href="DataObjectJunction.html#orderBy">orderBy</a></li><li data-type='method'><a href="DataObjectJunction.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="DataObjectJunction.html#prepare">prepare</a></li><li data-type='method'><a href="DataObjectJunction.html#remove">remove</a></li><li data-type='method'><a href="DataObjectJunction.html#round">round</a></li><li data-type='method'><a href="DataObjectJunction.html#search">search</a></li><li data-type='method'><a href="DataObjectJunction.html#select">select</a></li><li data-type='method'><a href="DataObjectJunction.html#silent">silent</a></li><li data-type='method'><a href="DataObjectJunction.html#skip">skip</a></li><li data-type='method'><a href="DataObjectJunction.html#startsWith">startsWith</a></li><li data-type='method'><a href="DataObjectJunction.html#substr">substr</a></li><li data-type='method'><a href="DataObjectJunction.html#subtract">subtract</a></li><li data-type='method'><a href="DataObjectJunction.html#sumOf">sumOf</a></li><li data-type='method'><a href="DataObjectJunction.html#take">take</a></li><li data-type='method'><a href="DataObjectJunction.html#thenBy">thenBy</a></li><li data-type='method'><a href="DataObjectJunction.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="DataObjectJunction.html#title">title</a></li><li data-type='method'><a href="DataObjectJunction.html#toExpand">toExpand</a></li><li data-type='method'><a href="DataObjectJunction.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="DataObjectJunction.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="DataObjectJunction.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="DataObjectJunction.html#toMD5">toMD5</a></li><li data-type='method'><a href="DataObjectJunction.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="DataObjectJunction.html#trim">trim</a></li><li data-type='method'><a href="DataObjectJunction.html#value">value</a></li><li data-type='method'><a href="DataObjectJunction.html#where">where</a></li></ul></li><li><a href="DataPermissionEventArgs.html">DataPermissionEventArgs</a></li><li><i class='ionicons ion-ios-minus'></i><a href="DataPermissionEventListener.html">DataPermissionEventListener</a><ul class='methods'><li data-type='method'><a href="DataPermissionEventListener.html#beforeExecute">beforeExecute</a></li><li data-type='method'><a href="DataPermissionEventListener.html#beforeRemove">beforeRemove</a></li><li data-type='method'><a href="DataPermissionEventListener.html#beforeSave">beforeSave</a></li><li data-type='method'><a href="DataPermissionEventListener.html#validate">validate</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataQueryable.html">DataQueryable</a><ul class='methods'><li data-type='method'><a href="DataQueryable.html#add">add</a></li><li data-type='method'><a href="DataQueryable.html#all">all</a></li><li data-type='method'><a href="DataQueryable.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="DataQueryable.html#and">and</a></li><li data-type='method'><a href="DataQueryable.html#asArray">asArray</a></li><li data-type='method'><a href="DataQueryable.html#average">average</a></li><li data-type='method'><a href="DataQueryable.html#between">between</a></li><li data-type='method'><a href="DataQueryable.html#bit">bit</a></li><li data-type='method'><a href="DataQueryable.html#cache">cache</a></li><li data-type='method'><a href="DataQueryable.html#ceil">ceil</a></li><li data-type='method'><a href="DataQueryable.html#clone">clone</a></li><li data-type='method'><a href="DataQueryable.html#concat">concat</a></li><li data-type='method'><a href="DataQueryable.html#contains">contains</a></li><li data-type='method'><a href="DataQueryable.html#count">count</a></li><li data-type='method'><a href="DataQueryable.html#countOf">countOf</a></li><li data-type='method'><a href="DataQueryable.html#data">data</a></li><li data-type='method'><a href="DataQueryable.html#divide">divide</a></li><li data-type='method'><a href="DataQueryable.html#endsWith">endsWith</a></li><li data-type='method'><a href="DataQueryable.html#equal">equal</a></li><li data-type='method'><a href="DataQueryable.html#expand">expand</a></li><li data-type='method'><a href="DataQueryable.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="DataQueryable.html#first">first</a></li><li data-type='method'><a href="DataQueryable.html#flatten">flatten</a></li><li data-type='method'><a href="DataQueryable.html#floor">floor</a></li><li data-type='method'><a href="DataQueryable.html#getDate">getDate</a></li><li data-type='method'><a href="DataQueryable.html#getDay">getDay</a></li><li data-type='method'><a href="DataQueryable.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="DataQueryable.html#getHours">getHours</a></li><li data-type='method'><a href="DataQueryable.html#getItems">getItems</a></li><li data-type='method'><a href="DataQueryable.html#getLevels">getLevels</a></li><li data-type='method'><a href="DataQueryable.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="DataQueryable.html#getMonth">getMonth</a></li><li data-type='method'><a href="DataQueryable.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="DataQueryable.html#getYear">getYear</a></li><li data-type='method'><a href="DataQueryable.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="DataQueryable.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="DataQueryable.html#groupBy">groupBy</a></li><li data-type='method'><a href="DataQueryable.html#in">in</a></li><li data-type='method'><a href="DataQueryable.html#indexOf">indexOf</a></li><li data-type='method'><a href="DataQueryable.html#is">is</a></li><li data-type='method'><a href="DataQueryable.html#length">length</a></li><li data-type='method'><a href="DataQueryable.html#levels">levels</a></li><li data-type='method'><a href="DataQueryable.html#list">list</a></li><li data-type='method'><a href="DataQueryable.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="DataQueryable.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="DataQueryable.html#max">max</a></li><li data-type='method'><a href="DataQueryable.html#migrate">migrate</a></li><li data-type='method'><a href="DataQueryable.html#min">min</a></li><li data-type='method'><a href="DataQueryable.html#mod">mod</a></li><li data-type='method'><a href="DataQueryable.html#multiply">multiply</a></li><li data-type='method'><a href="DataQueryable.html#notContains">notContains</a></li><li data-type='method'><a href="DataQueryable.html#notEqual">notEqual</a></li><li data-type='method'><a href="DataQueryable.html#notIn">notIn</a></li><li data-type='method'><a href="DataQueryable.html#or">or</a></li><li data-type='method'><a href="DataQueryable.html#orderBy">orderBy</a></li><li data-type='method'><a href="DataQueryable.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="DataQueryable.html#prepare">prepare</a></li><li data-type='method'><a href="DataQueryable.html#round">round</a></li><li data-type='method'><a href="DataQueryable.html#search">search</a></li><li data-type='method'><a href="DataQueryable.html#select">select</a></li><li data-type='method'><a href="DataQueryable.html#silent">silent</a></li><li data-type='method'><a href="DataQueryable.html#skip">skip</a></li><li data-type='method'><a href="DataQueryable.html#startsWith">startsWith</a></li><li data-type='method'><a href="DataQueryable.html#substr">substr</a></li><li data-type='method'><a href="DataQueryable.html#subtract">subtract</a></li><li data-type='method'><a href="DataQueryable.html#sumOf">sumOf</a></li><li data-type='method'><a href="DataQueryable.html#take">take</a></li><li data-type='method'><a href="DataQueryable.html#thenBy">thenBy</a></li><li data-type='method'><a href="DataQueryable.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="DataQueryable.html#title">title</a></li><li data-type='method'><a href="DataQueryable.html#toExpand">toExpand</a></li><li data-type='method'><a href="DataQueryable.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="DataQueryable.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="DataQueryable.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="DataQueryable.html#toMD5">toMD5</a></li><li data-type='method'><a href="DataQueryable.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="DataQueryable.html#trim">trim</a></li><li data-type='method'><a href="DataQueryable.html#value">value</a></li><li data-type='method'><a href="DataQueryable.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DataStateValidatorListener.html">DataStateValidatorListener</a><ul class='methods'><li data-type='method'><a href="DataStateValidatorListener.html#beforeRemove">beforeRemove</a></li><li data-type='method'><a href="DataStateValidatorListener.html#beforeSave">beforeSave</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DefaultDataContext.html">DefaultDataContext</a><ul class='methods'><li data-type='method'><a href="DefaultDataContext.html#finalize">finalize</a></li><li data-type='method'><a href="DefaultDataContext.html#getConfiguration">getConfiguration</a></li><li data-type='method'><a href="DefaultDataContext.html#model">model</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DefaultValueListener.html">DefaultValueListener</a><ul class='methods'><li data-type='method'><a href="DefaultValueListener.html#beforeSave">beforeSave</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HasManyAssociation.html">HasManyAssociation</a><ul class='methods'><li data-type='method'><a href="HasManyAssociation.html#add">add</a></li><li data-type='method'><a href="HasManyAssociation.html#all">all</a></li><li data-type='method'><a href="HasManyAssociation.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="HasManyAssociation.html#and">and</a></li><li data-type='method'><a href="HasManyAssociation.html#asArray">asArray</a></li><li data-type='method'><a href="HasManyAssociation.html#average">average</a></li><li data-type='method'><a href="HasManyAssociation.html#between">between</a></li><li data-type='method'><a href="HasManyAssociation.html#bit">bit</a></li><li data-type='method'><a href="HasManyAssociation.html#cache">cache</a></li><li data-type='method'><a href="HasManyAssociation.html#ceil">ceil</a></li><li data-type='method'><a href="HasManyAssociation.html#clone">clone</a></li><li data-type='method'><a href="HasManyAssociation.html#concat">concat</a></li><li data-type='method'><a href="HasManyAssociation.html#contains">contains</a></li><li data-type='method'><a href="HasManyAssociation.html#count">count</a></li><li data-type='method'><a href="HasManyAssociation.html#countOf">countOf</a></li><li data-type='method'><a href="HasManyAssociation.html#data">data</a></li><li data-type='method'><a href="HasManyAssociation.html#divide">divide</a></li><li data-type='method'><a href="HasManyAssociation.html#endsWith">endsWith</a></li><li data-type='method'><a href="HasManyAssociation.html#equal">equal</a></li><li data-type='method'><a href="HasManyAssociation.html#expand">expand</a></li><li data-type='method'><a href="HasManyAssociation.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="HasManyAssociation.html#first">first</a></li><li data-type='method'><a href="HasManyAssociation.html#flatten">flatten</a></li><li data-type='method'><a href="HasManyAssociation.html#floor">floor</a></li><li data-type='method'><a href="HasManyAssociation.html#getDate">getDate</a></li><li data-type='method'><a href="HasManyAssociation.html#getDay">getDay</a></li><li data-type='method'><a href="HasManyAssociation.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="HasManyAssociation.html#getHours">getHours</a></li><li data-type='method'><a href="HasManyAssociation.html#getItems">getItems</a></li><li data-type='method'><a href="HasManyAssociation.html#getLevels">getLevels</a></li><li data-type='method'><a href="HasManyAssociation.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="HasManyAssociation.html#getMonth">getMonth</a></li><li data-type='method'><a href="HasManyAssociation.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="HasManyAssociation.html#getYear">getYear</a></li><li data-type='method'><a href="HasManyAssociation.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="HasManyAssociation.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="HasManyAssociation.html#groupBy">groupBy</a></li><li data-type='method'><a href="HasManyAssociation.html#in">in</a></li><li data-type='method'><a href="HasManyAssociation.html#indexOf">indexOf</a></li><li data-type='method'><a href="HasManyAssociation.html#is">is</a></li><li data-type='method'><a href="HasManyAssociation.html#length">length</a></li><li data-type='method'><a href="HasManyAssociation.html#levels">levels</a></li><li data-type='method'><a href="HasManyAssociation.html#list">list</a></li><li data-type='method'><a href="HasManyAssociation.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="HasManyAssociation.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="HasManyAssociation.html#max">max</a></li><li data-type='method'><a href="HasManyAssociation.html#migrate">migrate</a></li><li data-type='method'><a href="HasManyAssociation.html#min">min</a></li><li data-type='method'><a href="HasManyAssociation.html#mod">mod</a></li><li data-type='method'><a href="HasManyAssociation.html#multiply">multiply</a></li><li data-type='method'><a href="HasManyAssociation.html#notContains">notContains</a></li><li data-type='method'><a href="HasManyAssociation.html#notEqual">notEqual</a></li><li data-type='method'><a href="HasManyAssociation.html#notIn">notIn</a></li><li data-type='method'><a href="HasManyAssociation.html#or">or</a></li><li data-type='method'><a href="HasManyAssociation.html#orderBy">orderBy</a></li><li data-type='method'><a href="HasManyAssociation.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="HasManyAssociation.html#prepare">prepare</a></li><li data-type='method'><a href="HasManyAssociation.html#round">round</a></li><li data-type='method'><a href="HasManyAssociation.html#search">search</a></li><li data-type='method'><a href="HasManyAssociation.html#select">select</a></li><li data-type='method'><a href="HasManyAssociation.html#silent">silent</a></li><li data-type='method'><a href="HasManyAssociation.html#skip">skip</a></li><li data-type='method'><a href="HasManyAssociation.html#startsWith">startsWith</a></li><li data-type='method'><a href="HasManyAssociation.html#substr">substr</a></li><li data-type='method'><a href="HasManyAssociation.html#subtract">subtract</a></li><li data-type='method'><a href="HasManyAssociation.html#sumOf">sumOf</a></li><li data-type='method'><a href="HasManyAssociation.html#take">take</a></li><li data-type='method'><a href="HasManyAssociation.html#thenBy">thenBy</a></li><li data-type='method'><a href="HasManyAssociation.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="HasManyAssociation.html#title">title</a></li><li data-type='method'><a href="HasManyAssociation.html#toExpand">toExpand</a></li><li data-type='method'><a href="HasManyAssociation.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="HasManyAssociation.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="HasManyAssociation.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="HasManyAssociation.html#toMD5">toMD5</a></li><li data-type='method'><a href="HasManyAssociation.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="HasManyAssociation.html#trim">trim</a></li><li data-type='method'><a href="HasManyAssociation.html#value">value</a></li><li data-type='method'><a href="HasManyAssociation.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HasOneAssociation.html">HasOneAssociation</a><ul class='methods'><li data-type='method'><a href="HasOneAssociation.html#add">add</a></li><li data-type='method'><a href="HasOneAssociation.html#all">all</a></li><li data-type='method'><a href="HasOneAssociation.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="HasOneAssociation.html#and">and</a></li><li data-type='method'><a href="HasOneAssociation.html#asArray">asArray</a></li><li data-type='method'><a href="HasOneAssociation.html#average">average</a></li><li data-type='method'><a href="HasOneAssociation.html#between">between</a></li><li data-type='method'><a href="HasOneAssociation.html#bit">bit</a></li><li data-type='method'><a href="HasOneAssociation.html#cache">cache</a></li><li data-type='method'><a href="HasOneAssociation.html#ceil">ceil</a></li><li data-type='method'><a href="HasOneAssociation.html#clone">clone</a></li><li data-type='method'><a href="HasOneAssociation.html#concat">concat</a></li><li data-type='method'><a href="HasOneAssociation.html#contains">contains</a></li><li data-type='method'><a href="HasOneAssociation.html#count">count</a></li><li data-type='method'><a href="HasOneAssociation.html#countOf">countOf</a></li><li data-type='method'><a href="HasOneAssociation.html#data">data</a></li><li data-type='method'><a href="HasOneAssociation.html#divide">divide</a></li><li data-type='method'><a href="HasOneAssociation.html#endsWith">endsWith</a></li><li data-type='method'><a href="HasOneAssociation.html#equal">equal</a></li><li data-type='method'><a href="HasOneAssociation.html#expand">expand</a></li><li data-type='method'><a href="HasOneAssociation.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="HasOneAssociation.html#first">first</a></li><li data-type='method'><a href="HasOneAssociation.html#flatten">flatten</a></li><li data-type='method'><a href="HasOneAssociation.html#floor">floor</a></li><li data-type='method'><a href="HasOneAssociation.html#getDate">getDate</a></li><li data-type='method'><a href="HasOneAssociation.html#getDay">getDay</a></li><li data-type='method'><a href="HasOneAssociation.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="HasOneAssociation.html#getHours">getHours</a></li><li data-type='method'><a href="HasOneAssociation.html#getItems">getItems</a></li><li data-type='method'><a href="HasOneAssociation.html#getLevels">getLevels</a></li><li data-type='method'><a href="HasOneAssociation.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="HasOneAssociation.html#getMonth">getMonth</a></li><li data-type='method'><a href="HasOneAssociation.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="HasOneAssociation.html#getYear">getYear</a></li><li data-type='method'><a href="HasOneAssociation.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="HasOneAssociation.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="HasOneAssociation.html#groupBy">groupBy</a></li><li data-type='method'><a href="HasOneAssociation.html#in">in</a></li><li data-type='method'><a href="HasOneAssociation.html#indexOf">indexOf</a></li><li data-type='method'><a href="HasOneAssociation.html#is">is</a></li><li data-type='method'><a href="HasOneAssociation.html#length">length</a></li><li data-type='method'><a href="HasOneAssociation.html#levels">levels</a></li><li data-type='method'><a href="HasOneAssociation.html#list">list</a></li><li data-type='method'><a href="HasOneAssociation.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="HasOneAssociation.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="HasOneAssociation.html#max">max</a></li><li data-type='method'><a href="HasOneAssociation.html#migrate">migrate</a></li><li data-type='method'><a href="HasOneAssociation.html#min">min</a></li><li data-type='method'><a href="HasOneAssociation.html#mod">mod</a></li><li data-type='method'><a href="HasOneAssociation.html#multiply">multiply</a></li><li data-type='method'><a href="HasOneAssociation.html#notContains">notContains</a></li><li data-type='method'><a href="HasOneAssociation.html#notEqual">notEqual</a></li><li data-type='method'><a href="HasOneAssociation.html#notIn">notIn</a></li><li data-type='method'><a href="HasOneAssociation.html#or">or</a></li><li data-type='method'><a href="HasOneAssociation.html#orderBy">orderBy</a></li><li data-type='method'><a href="HasOneAssociation.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="HasOneAssociation.html#prepare">prepare</a></li><li data-type='method'><a href="HasOneAssociation.html#round">round</a></li><li data-type='method'><a href="HasOneAssociation.html#search">search</a></li><li data-type='method'><a href="HasOneAssociation.html#select">select</a></li><li data-type='method'><a href="HasOneAssociation.html#silent">silent</a></li><li data-type='method'><a href="HasOneAssociation.html#skip">skip</a></li><li data-type='method'><a href="HasOneAssociation.html#startsWith">startsWith</a></li><li data-type='method'><a href="HasOneAssociation.html#substr">substr</a></li><li data-type='method'><a href="HasOneAssociation.html#subtract">subtract</a></li><li data-type='method'><a href="HasOneAssociation.html#sumOf">sumOf</a></li><li data-type='method'><a href="HasOneAssociation.html#take">take</a></li><li data-type='method'><a href="HasOneAssociation.html#thenBy">thenBy</a></li><li data-type='method'><a href="HasOneAssociation.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="HasOneAssociation.html#title">title</a></li><li data-type='method'><a href="HasOneAssociation.html#toExpand">toExpand</a></li><li data-type='method'><a href="HasOneAssociation.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="HasOneAssociation.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="HasOneAssociation.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="HasOneAssociation.html#toMD5">toMD5</a></li><li data-type='method'><a href="HasOneAssociation.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="HasOneAssociation.html#trim">trim</a></li><li data-type='method'><a href="HasOneAssociation.html#value">value</a></li><li data-type='method'><a href="HasOneAssociation.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HasParentJunction.html">HasParentJunction</a><ul class='methods'><li data-type='method'><a href="HasParentJunction.html#add">add</a></li><li data-type='method'><a href="HasParentJunction.html#all">all</a></li><li data-type='method'><a href="HasParentJunction.html#alsoSelect">alsoSelect</a></li><li data-type='method'><a href="HasParentJunction.html#and">and</a></li><li data-type='method'><a href="HasParentJunction.html#asArray">asArray</a></li><li data-type='method'><a href="HasParentJunction.html#average">average</a></li><li data-type='method'><a href="HasParentJunction.html#between">between</a></li><li data-type='method'><a href="HasParentJunction.html#bit">bit</a></li><li data-type='method'><a href="HasParentJunction.html#cache">cache</a></li><li data-type='method'><a href="HasParentJunction.html#ceil">ceil</a></li><li data-type='method'><a href="HasParentJunction.html#clone">clone</a></li><li data-type='method'><a href="HasParentJunction.html#concat">concat</a></li><li data-type='method'><a href="HasParentJunction.html#contains">contains</a></li><li data-type='method'><a href="HasParentJunction.html#count">count</a></li><li data-type='method'><a href="HasParentJunction.html#countOf">countOf</a></li><li data-type='method'><a href="HasParentJunction.html#data">data</a></li><li data-type='method'><a href="HasParentJunction.html#divide">divide</a></li><li data-type='method'><a href="HasParentJunction.html#endsWith">endsWith</a></li><li data-type='method'><a href="HasParentJunction.html#equal">equal</a></li><li data-type='method'><a href="HasParentJunction.html#expand">expand</a></li><li data-type='method'><a href="HasParentJunction.html#fieldOf">fieldOf</a></li><li data-type='method'><a href="HasParentJunction.html#first">first</a></li><li data-type='method'><a href="HasParentJunction.html#flatten">flatten</a></li><li data-type='method'><a href="HasParentJunction.html#floor">floor</a></li><li data-type='method'><a href="HasParentJunction.html#getBaseModel">getBaseModel</a></li><li data-type='method'><a href="HasParentJunction.html#getDate">getDate</a></li><li data-type='method'><a href="HasParentJunction.html#getDay">getDay</a></li><li data-type='method'><a href="HasParentJunction.html#getFullYear">getFullYear</a></li><li data-type='method'><a href="HasParentJunction.html#getHours">getHours</a></li><li data-type='method'><a href="HasParentJunction.html#getItems">getItems</a></li><li data-type='method'><a href="HasParentJunction.html#getLevels">getLevels</a></li><li data-type='method'><a href="HasParentJunction.html#getMinutes">getMinutes</a></li><li data-type='method'><a href="HasParentJunction.html#getMonth">getMonth</a></li><li data-type='method'><a href="HasParentJunction.html#getSeconds">getSeconds</a></li><li data-type='method'><a href="HasParentJunction.html#getYear">getYear</a></li><li data-type='method'><a href="HasParentJunction.html#greaterOrEqual">greaterOrEqual</a></li><li data-type='method'><a href="HasParentJunction.html#greaterThan">greaterThan</a></li><li data-type='method'><a href="HasParentJunction.html#groupBy">groupBy</a></li><li data-type='method'><a href="HasParentJunction.html#in">in</a></li><li data-type='method'><a href="HasParentJunction.html#indexOf">indexOf</a></li><li data-type='method'><a href="HasParentJunction.html#insert">insert</a></li><li data-type='method'><a href="HasParentJunction.html#is">is</a></li><li data-type='method'><a href="HasParentJunction.html#length">length</a></li><li data-type='method'><a href="HasParentJunction.html#levels">levels</a></li><li data-type='method'><a href="HasParentJunction.html#list">list</a></li><li data-type='method'><a href="HasParentJunction.html#lowerOrEqual">lowerOrEqual</a></li><li data-type='method'><a href="HasParentJunction.html#lowerThan">lowerThan</a></li><li data-type='method'><a href="HasParentJunction.html#max">max</a></li><li data-type='method'><a href="HasParentJunction.html#migrate">migrate</a></li><li data-type='method'><a href="HasParentJunction.html#min">min</a></li><li data-type='method'><a href="HasParentJunction.html#mod">mod</a></li><li data-type='method'><a href="HasParentJunction.html#multiply">multiply</a></li><li data-type='method'><a href="HasParentJunction.html#notContains">notContains</a></li><li data-type='method'><a href="HasParentJunction.html#notEqual">notEqual</a></li><li data-type='method'><a href="HasParentJunction.html#notIn">notIn</a></li><li data-type='method'><a href="HasParentJunction.html#or">or</a></li><li data-type='method'><a href="HasParentJunction.html#orderBy">orderBy</a></li><li data-type='method'><a href="HasParentJunction.html#orderByDescending">orderByDescending</a></li><li data-type='method'><a href="HasParentJunction.html#prepare">prepare</a></li><li data-type='method'><a href="HasParentJunction.html#remove">remove</a></li><li data-type='method'><a href="HasParentJunction.html#round">round</a></li><li data-type='method'><a href="HasParentJunction.html#search">search</a></li><li data-type='method'><a href="HasParentJunction.html#select">select</a></li><li data-type='method'><a href="HasParentJunction.html#silent">silent</a></li><li data-type='method'><a href="HasParentJunction.html#skip">skip</a></li><li data-type='method'><a href="HasParentJunction.html#startsWith">startsWith</a></li><li data-type='method'><a href="HasParentJunction.html#substr">substr</a></li><li data-type='method'><a href="HasParentJunction.html#subtract">subtract</a></li><li data-type='method'><a href="HasParentJunction.html#sumOf">sumOf</a></li><li data-type='method'><a href="HasParentJunction.html#take">take</a></li><li data-type='method'><a href="HasParentJunction.html#thenBy">thenBy</a></li><li data-type='method'><a href="HasParentJunction.html#thenByDescending">thenByDescending</a></li><li data-type='method'><a href="HasParentJunction.html#title">title</a></li><li data-type='method'><a href="HasParentJunction.html#toExpand">toExpand</a></li><li data-type='method'><a href="HasParentJunction.html#toLocaleLowerCase">toLocaleLowerCase</a></li><li data-type='method'><a href="HasParentJunction.html#toLocaleUpperCase">toLocaleUpperCase</a></li><li data-type='method'><a href="HasParentJunction.html#toLowerCase">toLowerCase</a></li><li data-type='method'><a href="HasParentJunction.html#toMD5">toMD5</a></li><li data-type='method'><a href="HasParentJunction.html#toUpperCase">toUpperCase</a></li><li data-type='method'><a href="HasParentJunction.html#trim">trim</a></li><li data-type='method'><a href="HasParentJunction.html#value">value</a></li><li data-type='method'><a href="HasParentJunction.html#where">where</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-DataTypeValidator.html">DataTypeValidator</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-DataTypeValidator.html#validateSync">validateSync</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-DataValidator.html">DataValidator</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-DataValidator.html#getContext">getContext</a></li><li data-type='method'><a href="module-most-data_data-validator-DataValidator.html#setContext">setContext</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-DataValidatorListener.html">DataValidatorListener</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-DataValidatorListener.html#beforeSave">beforeSave</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-MaxLengthValidator.html">MaxLengthValidator</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-MaxLengthValidator.html#validateSync">validateSync</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-MaxValueValidator.html">MaxValueValidator</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-MaxValueValidator.html#validateSync">validateSync</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-MinLengthValidator.html">MinLengthValidator</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-MinLengthValidator.html#validateSync">validateSync</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-MinValueValidator.html">MinValueValidator</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-MinValueValidator.html#validateSync">validateSync</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-PatternValidator.html">PatternValidator</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-PatternValidator.html#validateSync">validateSync</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-RangeValidator.html">RangeValidator</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-RangeValidator.html#validateSync">validateSync</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-validator-RequiredValidator.html">RequiredValidator</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-validator-RequiredValidator.html#validateSync">validateSync</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_functions-FunctionContext.html">FunctionContext</a><ul class='methods'><li data-type='method'><a href="module-most-data_functions-FunctionContext.html#chars">chars</a></li><li data-type='method'><a href="module-most-data_functions-FunctionContext.html#int">int</a></li><li data-type='method'><a href="module-most-data_functions-FunctionContext.html#me">me</a></li><li data-type='method'><a href="module-most-data_functions-FunctionContext.html#newGuid">newGuid</a></li><li data-type='method'><a href="module-most-data_functions-FunctionContext.html#newid">newid</a></li><li data-type='method'><a href="module-most-data_functions-FunctionContext.html#now">now</a></li><li data-type='method'><a href="module-most-data_functions-FunctionContext.html#password">password</a></li><li data-type='method'><a href="module-most-data_functions-FunctionContext.html#today">today</a></li><li data-type='method'><a href="module-most-data_functions-FunctionContext.html#user">user</a></li></ul></li><li><a href="module-most-data_types-AccessDeniedException.html">AccessDeniedException</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_types-DataAdapter.html">DataAdapter</a><ul class='methods'><li data-type='method'><a href="module-most-data_types-DataAdapter.html#close">close</a></li><li data-type='method'><a href="module-most-data_types-DataAdapter.html#createView">createView</a></li><li data-type='method'><a href="module-most-data_types-DataAdapter.html#execute">execute</a></li><li data-type='method'><a href="module-most-data_types-DataAdapter.html#executeBatch">executeBatch</a></li><li data-type='method'><a href="module-most-data_types-DataAdapter.html#executeInTransaction">executeInTransaction</a></li><li data-type='method'><a href="module-most-data_types-DataAdapter.html#open">open</a></li><li data-type='method'><a href="module-most-data_types-DataAdapter.html#selectIdentity">selectIdentity</a></li></ul></li><li><a href="module-most-data_types-DataAssociationMapping.html">DataAssociationMapping</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_types-DataContext.html">DataContext</a><ul class='methods'><li data-type='method'><a href="module-most-data_types-DataContext.html#finalize">finalize</a></li><li data-type='method'><a href="module-most-data_types-DataContext.html#getConfiguration">getConfiguration</a></li><li data-type='method'><a href="module-most-data_types-DataContext.html#model">model</a></li></ul></li><li><a href="module-most-data_types-DataEventArgs.html">DataEventArgs</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_types-DataEventListener.html">DataEventListener</a><ul class='methods'><li data-type='method'><a href="module-most-data_types-DataEventListener.html#afterExecute">afterExecute</a></li><li data-type='method'><a href="module-most-data_types-DataEventListener.html#afterRemove">afterRemove</a></li><li data-type='method'><a href="module-most-data_types-DataEventListener.html#afterSave">afterSave</a></li><li data-type='method'><a href="module-most-data_types-DataEventListener.html#afterUpgrade">afterUpgrade</a></li><li data-type='method'><a href="module-most-data_types-DataEventListener.html#beforeExecute">beforeExecute</a></li><li data-type='method'><a href="module-most-data_types-DataEventListener.html#beforeRemove">beforeRemove</a></li><li data-type='method'><a href="module-most-data_types-DataEventListener.html#beforeSave">beforeSave</a></li></ul></li><li><a href="module-most-data_types-DataException.html">DataException</a></li><li><a href="module-most-data_types-DataField.html">DataField</a></li><li><a href="module-most-data_types-DataModelEventListener.html">DataModelEventListener</a></li><li><a href="module-most-data_types-DataModelPrivilege.html">DataModelPrivilege</a></li><li><a href="module-most-data_types-DataNotFoundException.html">DataNotFoundException</a></li><li><a href="module-most-data_types-DataResultSet.html">DataResultSet</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_types-EventEmitter2.html">EventEmitter2</a><ul class='methods'><li data-type='method'><a href="module-most-data_types-EventEmitter2.html#emit">emit</a></li></ul></li><li><a href="module-most-data_types-NotNullException.html">NotNullException</a></li><li><a href="module-most-data_types-UniqueConstraintException.html">UniqueConstraintException</a></li><li><i class='ionicons ion-ios-minus'></i><a href="NamedDataContext.html">NamedDataContext</a><ul class='methods'><li data-type='method'><a href="NamedDataContext.html#getConfiguration">getConfiguration</a></li><li data-type='method'><a href="NamedDataContext.html#model">model</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="NotNullConstraintListener.html">NotNullConstraintListener</a><ul class='methods'><li data-type='method'><a href="NotNullConstraintListener.html#beforeSave">beforeSave</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="UniqueContraintListener.html">UniqueContraintListener</a><ul class='methods'><li data-type='method'><a href="UniqueContraintListener.html#beforeSave">beforeSave</a></li></ul></li></ul><h3>Modules</h3><ul><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data.html">most-data</a><ul class='methods'><li data-type='method'><a href="module-most-data.html#.execute">execute</a></li><li data-type='method'><a href="module-most-data.html#.executeAs">executeAs</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-cache.html">most-data/data-cache</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-cache.html#.getCurrent">getCurrent</a></li></ul></li><li><a href="module-most-data_data-classes.html">most-data/data-classes</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-common.html">most-data/data-common</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-common.html#.dasherize">dasherize</a></li><li data-type='method'><a href="module-most-data_data-common.html#.debug">debug</a></li><li data-type='method'><a href="module-most-data_data-common.html#.isDefined">isDefined</a></li><li data-type='method'><a href="module-most-data_data-common.html#.isNullOrUndefined">isNullOrUndefined</a></li><li data-type='method'><a href="module-most-data_data-common.html#.log">log</a></li><li data-type='method'><a href="module-most-data_data-common.html#.md5">md5</a></li><li data-type='method'><a href="module-most-data_data-common.html#.randomChars">randomChars</a></li><li data-type='method'><a href="module-most-data_data-common.html#.randomInt">randomInt</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_data-configuration.html">most-data/data-configuration</a><ul class='methods'><li data-type='method'><a href="module-most-data_data-configuration.html#.createInstance">createInstance</a></li><li data-type='method'><a href="module-most-data_data-configuration.html#.getCurrent">getCurrent</a></li><li data-type='method'><a href="module-most-data_data-configuration.html#.getNamedConfiguration">getNamedConfiguration</a></li></ul></li><li><a href="module-most-data_data-validator.html">most-data/data-validator</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-data_functions.html">most-data/functions</a><ul class='methods'><li data-type='method'><a href="module-most-data_functions.html#.createContext">createContext</a></li><li data-type='method'><a href="module-most-data_functions.html#.newid">newid</a></li><li data-type='method'><a href="module-most-data_functions.html#.now">now</a></li><li data-type='method'><a href="module-most-data_functions.html#.today">today</a></li><li data-type='method'><a href="module-most-data_functions.html#.user">user</a></li></ul></li><li><a href="module-most-data_types.html">most-data/types</a></li></ul><h3>Global</h3><ul><li><a href="global.html#PermissionMask">PermissionMask</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">NotNullException</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-most-data_types.html">most-data/types</a>~</span>
+        
+        NotNullException
+        </h2>
+        
+            <div class="class-description">Extends Error object for throwing not null exceptions.</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="NotNullException"><span class="type-signature"></span>new NotNullException<span class="signature">(message<span class="signature-attributes">opt</span>, innerMessage<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The error message</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>innerMessage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The error inner message</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>code</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A string that represents an error code. The default error code is ENULL.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The error message.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>innerMessage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The error inner message.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A number that represents an error status. This error status may be used for throwing the approriate HTTP error. The default status is 409 (Conflict)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>model</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The target model name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>field</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The target field name</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="types.js.html">types.js</a>, <a href="types.js.html#line547">line 547</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li>Error</li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-route.min.js"></script>
+<script src="scripts/layout.js"></script>
+
+</body>
+</html>
