@@ -2510,7 +2510,7 @@ The ":new" selector checks whether current data object is new or not. The ":live
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data-object.js.html">data-object.js</a>, <a href="data-object.js.html#line822">line 822</a>
+        <a href="data-object.js.html">data-object.js</a>, <a href="data-object.js.html#line832">line 832</a>
     </li></ul></dd>
     
 
@@ -2543,6 +2543,19 @@ The ":new" selector checks whether current data object is new or not. The ":live
 
 
     
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>context.model("Person").where("email").equal("alexis.rees@example.com").getTypedItem()
+        .then(function(person) {
+            //...
+            return person.silent().save().then(function() {
+                return done();
+            });
+        }).catch(function(err) {
+            return done(err);
+        });</code></pre>
 
 
 

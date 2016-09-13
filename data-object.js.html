@@ -859,6 +859,16 @@ DataObject.prototype.getAdditionalObject = function() {
  * Sets a boolean which indicates whether the next data operation will be executed in silent mode.
  * @param {boolean=} value
  * @returns DataObject
+ * @example
+ context.model("Person").where("email").equal("alexis.rees@example.com").getTypedItem()
+        .then(function(person) {
+            //...
+            return person.silent().save().then(function() {
+                return done();
+            });
+        }).catch(function(err) {
+            return done(err);
+        });
  */
 DataObject.prototype.silent = function(value) {
     this.getModel().silent(value);
