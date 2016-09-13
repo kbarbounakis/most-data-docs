@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>HasOneAssociation - Documentation</title>
+    <title>DataObjectTag - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">HasOneAssociation</h1>
+    <h1 class="page-title">DataObjectTag</h1>
     
 
     
@@ -42,46 +42,80 @@
 <header>
     
         <h2>
-        HasOneAssociation
+        DataObjectTag
         </h2>
         
-            <div class="class-description">Represents a foreign key association between two models.
- <p>
- This association may be defined in a field of a data model as follows:
- </p>
- <pre class="prettyprint"><code>
+            <div class="class-description">Represents a collection of values associated with a data object e.g. a collection of tags of an article, a set of skills of a person etc.
+<p>
+    This association may be defined in a field of a data model as follows:
+</p>
+<pre class="prettyprint"><code>
  {
-    "name": "Order", "id": 449, "title": "Order", "hidden": false, "sealed": false,
-    "abstract": false, "version": "1.0",
-    "fields": [
+     "name": "Person", "title": "Persons", "inherits":"Party", "version": "1.1",
+     "fields": [
         ...
         {
-            "name": "customer",
-            "title": "Customer",
-            "description": "Party placing the order.",
-            "type": "Party"
+            "@id": "https://themost.io/skills",
+            "name": "skills",
+            "title": "Skills",
+            "description": "A collection of skills of this person.",
+            "many": true,
+            "type": "Text"
         }
         ...
-    ]
- }
+     ]
+     }
  </code></pre>
  <p>
- where model Order has a foreign key association with model Party (Person or Organization).
- HasOneAssoication class inherits DataQueryable class for selecting the associated item.
+ where model [Person] has a one-to-many association with a collection of strings in order to define the skills of a person.
+ </p>
+ <p>
+ An instance of DataObjectTag class overrides DataQueryable methods for filtering associated values:
  </p>
  <pre class="prettyprint"><code>
- var orders = context.model('Order');
- orders.where('id').equal(145).first().then(function(result) {
-        var order = orders.convert(result);
-        order.property('customer')
-            .first().then(function(result) {
-                done(null, result);
-            }).catch(function(err) {
-                done(err);
+ var persons = context.model('Person');
+ persons.where('email').equal('veronica.fletcher@example.com')
+     .getTypedItem().then(function(person) {
+            person.property('skills').all().then(function(result) {
+                return done(null, result);
             });
-    }).catch(function(err) {
-        done(err);
-    });
+        }).catch(function(err) {
+            return done(err);
+        });
+ </code></pre>
+ <p>
+ Insert item(s):
+ </p>
+ <pre class="prettyprint"><code>
+ var persons = context.model('Person');
+ persons.where('email').equal('veronica.fletcher@example.com')
+     .getTypedItem().then(function(person) {
+                person.property('skills').insert([
+                    "node.js",
+                    "C#.NET",
+                    "PHP"
+                ]).then(function() {
+                    return done();
+                });
+            }).catch(function(err) {
+                return done(err);
+            });
+ </code></pre>
+ <p>
+ Remove item(s):
+ </p>
+ <pre class="prettyprint"><code>
+ var persons = context.model('Person');
+ persons.where('email').equal('veronica.fletcher@example.com')
+ .getTypedItem().then(function(person) {
+                person.property('skills').remove([
+                    "C#.NET"
+                ]).then(function() {
+                    return done();
+                });
+            }).catch(function(err) {
+                return done(err);
+            });
  </code></pre></div>
         
     
@@ -96,7 +130,7 @@
     <h2>Constructor</h2>
     
 
-    <h4 class="name" id="HasOneAssociation"><span class="type-signature"></span>new HasOneAssociation<span class="signature">(obj, association)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="DataObjectTag"><span class="type-signature"></span>new DataObjectTag<span class="signature">(obj, association)</span><span class="type-signature"></span></h4>
 
     
 
@@ -151,7 +185,7 @@
 
             
 
-            <td class="description last">An instance of DataObject class that represents the parent data object</td>
+            <td class="description last">An object which represents the parent data object</td>
         </tr>
 
     
@@ -164,7 +198,7 @@
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 |
 
 <span class="param-type">*</span>
@@ -215,6 +249,29 @@
 
         <tr>
             
+                <td class="name"><code>baseModel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="DataModel.html">DataModel</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The model associated with this data object junction</td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>parent</code></td>
             
 
@@ -231,7 +288,30 @@
 
             
 
-            <td class="description last">Gets or sets the parent data object</td>
+            <td class="description last">Gets or sets the parent data object associated with this instance of DataObjectTag class.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>mapping</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">DataAssociationMapping</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Gets or sets the mapping definition of this data object association.</td>
         </tr>
 
     
@@ -270,7 +350,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="has-one-association.js.html">has-one-association.js</a>, <a href="has-one-association.js.html#line85">line 85</a>
+        <a href="data-object-tag.js.html">data-object-tag.js</a>, <a href="data-object-tag.js.html#line124">line 124</a>
     </li></ul></dd>
     
 
@@ -320,78 +400,6 @@
 
     
 
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="mapping"><span class="type-signature"></span>mapping<span class="type-signature"> :DataAssociationMapping</span></h4>
-
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">DataAssociationMapping</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="has-one-association.js.html">has-one-association.js</a>, <a href="has-one-association.js.html#line105">line 105</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
     
 
     
@@ -2128,6 +2136,151 @@
 </dl>
 
     
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="clear"><span class="type-signature"></span>clear<span class="signature">(callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Removes all values
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>- This method is deprecated. Use removeAll() method instead</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data-object-tag.js.html">data-object-tag.js</a>, <a href="data-object-tag.js.html#line328">line 328</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4533,6 +4686,106 @@ even if model definition contains expandable fields. If value is missing, the de
     <dd>
         
 <span class="param-type"><a href="DataQueryable.html">DataQueryable</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getBaseModel"><span class="type-signature"></span>getBaseModel<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="DataModel.html">DataModel</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Gets an instance of DataModel class which represents the data adapter of this association
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data-object-tag.js.html">data-object-tag.js</a>, <a href="data-object-tag.js.html#line211">line 211</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="DataModel.html">DataModel</a></span>
 
 
     </dd>
@@ -6974,6 +7227,164 @@ even if model definition contains expandable fields. If value is missing, the de
 
     
 
+    <h4 class="name" id="insert"><span class="type-signature"></span>insert<span class="signature">(callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Inserts an array of values
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data-object-tag.js.html">data-object-tag.js</a>, <a href="data-object-tag.js.html#line290">line 290</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>context.model('Person').where('email').equal('veronica.fletcher@example.com')
+ .getTypedItem().then(function(person) {
+        person.property('skills').insert([
+            "node.js",
+            "C#.NET"
+        ]).then(function() {
+            return done();
+        });
+    }).catch(function(err) {
+        return done(err);
+    });</code></pre>
+
+
+
+        
+            
+
+    
+
     <h4 class="name" id="is"><span class="type-signature"></span>is<span class="signature">(obj)</span><span class="type-signature"> &rarr; {<a href="DataQueryable.html">DataQueryable</a>}</span></h4>
 
     
@@ -8230,7 +8641,7 @@ and the second argument is an object that represents a result set</td>
 
 
 <div class="description">
-    Migrates the underlying data model
+    Migrates the underlying data association adapter.
 </div>
 
 
@@ -8271,18 +8682,13 @@ and the second argument is an object that represents a result set</td>
 
             <td class="type">
             
-                
-<span class="param-type">function</span>
-
-
-            
             </td>
 
             
 
             
 
-            <td class="description last">A callback function that should be called at the end of this operation. The first argument may be an error if any occured.</td>
+            <td class="description last">A callback function where the first argument will contain the Error object if an error occured, or null otherwise.</td>
         </tr>
 
     
@@ -8301,8 +8707,10 @@ and the second argument is an object that represents a result set</td>
     
 
     
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
         <a href="DataQueryable.html#migrate">DataQueryable#migrate</a>
     </li></ul></dd>
     
@@ -8324,11 +8732,9 @@ and the second argument is an object that represents a result set</td>
     
 
     
-
-    
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data-queryable.js.html">data-queryable.js</a>, <a href="data-queryable.js.html#line2142">line 2142</a>
+        <a href="data-object-tag.js.html">data-object-tag.js</a>, <a href="data-object-tag.js.html#line234">line 234</a>
     </li></ul></dd>
     
 
@@ -10075,6 +10481,352 @@ and the second argument is an object that represents a result set</td>
         done(null, result);
     }).catch(function(err) {
         done(err);
+    });</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="remove"><span class="type-signature"></span>remove<span class="signature">(obj, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Removes a value or an array of values
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data-object-tag.js.html">data-object-tag.js</a>, <a href="data-object-tag.js.html#line401">line 401</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>context.model('Person').where('email').equal('veronica.fletcher@example.com')
+ .getTypedItem().then(function(person) {
+        person.property('skills').remove([
+            "node.js"
+        ]).then(function() {
+            return done();
+        });
+    }).catch(function(err) {
+        return done(err);
+    });</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeAll"><span class="type-signature"></span>removeAll<span class="signature">(callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Removes all values
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data-object-tag.js.html">data-object-tag.js</a>, <a href="data-object-tag.js.html#line346">line 346</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>context.model('Person').where('email').equal('veronica.fletcher@example.com')
+ .getTypedItem().then(function(person) {
+        person.property('skills').removeAll().then(function() {
+            return done();
+        });
+    }).catch(function(err) {
+        return done(err);
     });</code></pre>
 
 
